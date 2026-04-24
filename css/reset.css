@@ -1,0 +1,124 @@
+    /* ============================================
+    RESET — normalizes browser defaults
+    Based on modern CSS reset principles
+    ============================================ */
+
+    *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+
+    html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    font-weight: var(--weight-regular);
+    line-height: var(--leading-normal);
+    color: var(--color-text-on-light);
+    background-color: var(--color-surface-white);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    }
+
+    /* ============================================
+    TYPOGRAPHY RESET
+    ============================================ */
+
+    h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: var(--weight-bold);
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-tight);
+    color: inherit;
+    }
+
+    p {
+    line-height: var(--leading-normal);
+    color: inherit;
+    }
+
+    a {
+    color: inherit;
+    text-decoration: none;
+    }
+
+    a:hover {
+    color: var(--color-accent-hover);
+    }
+
+    strong {
+    font-weight: var(--weight-semibold);
+    }
+
+    em {
+    font-style: italic;
+    }
+
+    /* ============================================
+    LIST RESET
+    ============================================ */
+
+    ul, ol {
+    list-style: none;
+    }
+
+    /* ============================================
+    MEDIA RESET
+    ============================================ */
+
+    img, video, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    }
+
+    /* ============================================
+    FORM RESET
+    ============================================ */
+
+    input, textarea, select, button {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+    outline: none;
+    appearance: none;
+    }
+
+    button {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+    /* ============================================
+    TABLE RESET
+    ============================================ */
+
+    table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    }
+
+    /* ============================================
+    MISC
+    ============================================ */
+
+    /* Remove animations for people who prefer reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
