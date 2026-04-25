@@ -397,31 +397,35 @@
 
     .hero {
     min-height: 100vh;
-    padding-top: calc(var(--nav-height) + var(--space-16));
+    padding-top: calc(var(--nav-height) + var(--space-24));
     padding-bottom: var(--space-24);
     position: relative;
     overflow: hidden;
-    }
-
-    /* Two column layout */
-    .hero-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-16);
+    display: flex;
     align-items: center;
-    min-height: calc(100vh - var(--nav-height) - var(--space-16));
     }
 
-    /* Left side */
-    .hero-content {
+    .hero-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-8);
+    max-width: 860px;
+    margin-inline: auto;
+    }
+
+    /* Label */
+    .hero-container .section-label {
+    justify-content: center;
+    margin-bottom: 0;
     }
 
     /* Headline */
     .hero-headline {
-    font-size: var(--text-7xl);
+    font-size: clamp(3rem, 8vw, 5.5rem);
     line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-tight);
     }
 
     .hero-headline-accent {
@@ -431,27 +435,33 @@
 
     /* Subtext */
     .hero-sub {
-    max-width: 480px;
+    max-width: 560px;
     color: var(--color-text-on-dark-muted);
+    text-align: center;
     }
 
-    /* CTA row */
+    /* CTAs */
     .hero-ctas {
+    justify-content: center;
     flex-wrap: wrap;
+    margin-top: var(--space-4);
     }
 
-    /* Stats row */
+    /* Stats */
     .hero-stats {
     display: flex;
     align-items: center;
     gap: var(--space-8);
     padding-top: var(--space-8);
     border-top: 1px solid var(--color-border-dark);
+    margin-top: var(--space-8);
+    justify-content: center;
     }
 
     .hero-stat {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: var(--space-1);
     }
 
@@ -475,15 +485,20 @@
     background-color: var(--color-border-dark);
     }
 
-    /* Right side */
-    .hero-visual {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: var(--space-6);
-    position: relative;
+    /* ============================================
+    RESPONSIVE — HERO
+    ============================================ */
+
+    @media (max-width: 768px) {
+    .hero-stats {
+        gap: var(--space-6);
     }
 
+    .hero-ctas {
+        flex-direction: column;
+        align-items: center;
+    }
+    }
     /* ============================================
     FOOTER
     ============================================ */
