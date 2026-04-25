@@ -403,17 +403,6 @@
     overflow: hidden;
     }
 
-    /* Subtle grid overlay */
-    .hero-grid-overlay {
-    position: absolute;
-    inset: 0;
-    background-image:
-        linear-gradient(rgba(233, 224, 201, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(233, 224, 201, 0.03) 1px, transparent 1px);
-    background-size: 60px 60px;
-    pointer-events: none;
-    }
-
     /* Two column layout */
     .hero-container {
     display: grid;
@@ -493,75 +482,6 @@
     align-items: flex-end;
     gap: var(--space-6);
     position: relative;
-    }
-
-    /* Code card */
-    .hero-code-card {
-    width: 100%;
-    max-width: 440px;
-    background-color: var(--color-surface-mid);
-    border: 1px solid var(--color-border-dark);
-    border-radius: var(--radius-xl);
-    overflow: hidden;
-    box-shadow: var(--shadow-lg);
-    }
-
-    .hero-code-card-header {
-    display: flex;
-    align-items: center;
-    gap: var(--space-2);
-    padding: var(--space-4) var(--space-6);
-    border-bottom: 1px solid var(--color-border-dark);
-    }
-
-    .hero-code-dot {
-    width: 12px;
-    height: 12px;
-    border-radius: var(--radius-full);
-    }
-
-    .hero-code-dot.red    { background-color: #FF5F57; }
-    .hero-code-dot.yellow { background-color: #FFBD2E; }
-    .hero-code-dot.green  { background-color: #28CA42; }
-
-    .hero-code-content {
-    padding: var(--space-6);
-    font-size: var(--text-sm);
-    line-height: var(--leading-relaxed);
-    white-space: pre;
-    overflow-x: auto;
-    }
-
-    /* Code syntax colors */
-    .code-keyword { color: #90A4C2; }
-    .code-var     { color: var(--color-text-on-dark); }
-    .code-string  { color: var(--color-accent); }
-    .code-accent  { color: #28CA42; }
-
-    /* Floating availability badge */
-    .hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-3);
-    padding: var(--space-3) var(--space-5);
-    background-color: var(--color-surface-mid);
-    border: 1px solid var(--color-border-dark);
-    border-radius: var(--radius-full);
-    align-self: flex-start;
-    }
-
-    .hero-badge-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: var(--radius-full);
-    background-color: #28CA42;
-    box-shadow: 0 0 8px rgba(40, 202, 66, 0.6);
-    animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50%       { opacity: 0.4; }
     }
 
     /* ============================================
