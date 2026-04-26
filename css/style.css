@@ -306,6 +306,51 @@
     color: var(--color-accent);
     }
 
+    /* Logo tooltip */
+    .nav-logo {
+    position: relative;
+    }
+
+    .nav-logo-tooltip {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 0;
+    background-color: var(--color-surface-mid);
+    color: var(--color-text-on-dark);
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    font-weight: var(--weight-medium);
+    white-space: nowrap;
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border-dark);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-4px);
+    transition: opacity var(--transition-base),
+                transform var(--transition-base);
+    z-index: 200;
+    }
+
+    /* Small arrow pointing up */
+    .nav-logo-tooltip::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 16px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-surface-mid);
+    border-left: 1px solid var(--color-border-dark);
+    border-top: 1px solid var(--color-border-dark);
+    transform: rotate(45deg);
+    }
+
+    .nav-logo:hover .nav-logo-tooltip {
+    opacity: 1;
+    transform: translateY(0);
+    }
+
     /* Desktop links */
     .nav-links {
     display: flex;
@@ -314,11 +359,11 @@
     }
 
     .nav-links a {
-    font-size: var(--text-sm);
+    font-size: var(--text-base); 
     font-weight: var(--weight-medium);
     color: var(--color-text-on-dark-muted);
     transition: color var(--transition-fast);
-    letter-spacing: var(--tracking-wide);
+    letter-spacing: var(--tracking-normal); /* remove the wide tracking, feels better at larger size */
     }
 
     .nav-links a:hover {
@@ -351,6 +396,121 @@
     border-radius: var(--radius-full);
     }
 
+    /* ============================================
+    DROPDOWN NAVIGATION
+    ============================================ */
+
+    .nav-item {
+    position: relative;
+    list-style: none;
+    }
+
+    .nav-item > a {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    }
+
+    /* Chevron arrow */
+    .nav-item > a::after {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-right: 1.5px solid currentColor;
+    border-bottom: 1.5px solid currentColor;
+    transform: rotate(45deg) translateY(-2px);
+    transition: transform var(--transition-fast);
+    }
+
+    /* Rotate chevron when dropdown open */
+    .nav-item:hover > a::after {
+    transform: rotate(-135deg) translateY(-2px);
+    }
+
+    /* Items without dropdown — no chevron */
+    .nav-item.no-drop > a::after {
+    display: none;
+    }
+
+    /* Dropdown panel */
+    .nav-dropdown {
+    position: absolute;
+    top: calc(100% + 16px);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(18, 18, 31, 0.97);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--color-border-dark);
+    border-radius: var(--radius-lg);
+    padding: var(--space-4);
+    min-width: 280px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-50%) translateY(-8px);
+    transition: opacity var(--transition-base),
+                transform var(--transition-base);
+    z-index: 200;
+    }
+
+    /* Show on hover */
+    .nav-item:hover .nav-dropdown {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateX(-50%) translateY(0);
+    }
+
+    /* Bridge gap so dropdown stays open on mouse move */
+    .nav-dropdown::before {
+    content: '';
+    position: absolute;
+    top: -16px;
+    left: 0;
+    right: 0;
+    height: 16px;
+    }
+
+    /* Dropdown link item */
+    .nav-dropdown-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    padding: var(--space-4) var(--space-4);
+    border-radius: var(--radius-md);
+    transition: background-color var(--transition-fast);
+    cursor: pointer;
+    text-decoration: none;
+    }
+
+    .nav-dropdown-item:hover {
+    background-color: rgba(233, 224, 201, 0.06);
+    }
+
+    .nav-dropdown-item-title {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    color: var(--color-text-on-dark);
+    transition: color var(--transition-fast);
+    }
+
+    .nav-dropdown-item:hover .nav-dropdown-item-title {
+    color: var(--color-accent);
+    }
+
+    .nav-dropdown-item-desc {
+    font-size: var(--text-xs);
+    color: var(--color-text-on-dark-muted);
+    line-height: var(--leading-normal);
+    }
+
+    /* Divider between dropdown items */
+    .nav-dropdown-divider {
+    height: 1px;
+    background-color: var(--color-border-dark);
+    margin: var(--space-2) var(--space-4);
+    }
+
     /* Mobile menu — hidden by default */
     .nav-mobile {
     display: none;
@@ -359,9 +519,11 @@
     left: 0;
     right: 0;
     bottom: 0;
+    width: 100%;
     background-color: var(--color-surface-dark);
     padding: var(--space-8) var(--space-6);
     z-index: 99;
+    overflow-y: auto;
     }
 
     .nav-mobile.open {
@@ -483,6 +645,37 @@
     width: 1px;
     height: 40px;
     background-color: var(--color-border-dark);
+    }
+
+        /* Hero background image system */
+    .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('../images/hero-bg-3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+    }
+
+    /* Overlay — this is how you tint any photo 
+    to match your dark navy without losing the image */
+    .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(18, 18, 31, 0.92) 0%,
+        rgba(18, 18, 31, 0.75) 50%,
+        rgba(18, 18, 31, 0.85) 100%
+    );
+    z-index: 1;
+    }
+
+    /* Make sure hero content sits above both layers */
+    .hero-container {
+    position: relative;
+    z-index: 2;
     }
 
     /* ============================================

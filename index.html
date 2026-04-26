@@ -3,10 +3,10 @@
     <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Ulikhaya Mazibuko — Systems thinker, web developer and startup builder based in KwaZulu-Natal. Professional websites, automation systems and technical consulting for South African businesses." />
+    <meta name="description" content="Ulikhaya Mazibuko - Systems thinker, web developer and startup builder based in KwaZulu-Natal. Professional websites, automation systems and technical consulting for South African businesses." />
 
     <!-- Open Graph — controls how your link looks when shared on LinkedIn etc -->
-    <meta property="og:title" content="Ulikhaya Mazibuko — Web Developer & Systems Builder" />
+    <meta property="og:title" content="Ulikhaya Mazibuko - Web Developer & Systems Builder" />
     <meta property="og:description" content="Professional websites, automation systems and technical consulting for South African businesses." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ulikhayamazibuko.com" />
@@ -28,19 +28,96 @@
         <nav class="nav container">
 
         <!-- Logo -->
-        <a href="#top" class="nav-logo">
+        <a href="#top" class="nav-logo" id="navLogo">
             UM <span class="nav-logo-accent">Freelance</span>
+            <span class="nav-logo-tooltip">Freelance with Ulikhaya Mazibuko</span>
         </a>
 
         <!-- Desktop nav links -->
         <ul class="nav-links">
-            <li><a href="#top">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#startup">Startup</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+
+    <!-- Home — no dropdown -->
+    <li class="nav-item no-drop">
+        <a href="#top">Home</a>
+    </li>
+
+    <!-- About — no dropdown -->
+    <li class="nav-item no-drop">
+        <a href="#about">About</a>
+    </li>
+
+    <!-- Services — dropdown -->
+    <li class="nav-item">
+        <a href="services.html">Services</a>
+        <div class="nav-dropdown">
+
+        <a href="services.html#website-design" class="nav-dropdown-item">
+            <span class="nav-dropdown-item-title">Website Design & Development</span>
+            <span class="nav-dropdown-item-desc">Template-based and custom websites built for South African businesses</span>
+        </a>
+
+        <div class="nav-dropdown-divider"></div>
+
+        <a href="services.html#google-ads-automation" class="nav-dropdown-item">
+            <span class="nav-dropdown-item-title">Google Ads & Automation</span>
+            <span class="nav-dropdown-item-desc">Google Ads setup, Google My Business optimisation and workflow automation</span>
+        </a>
+
+        <div class="nav-dropdown-divider"></div>
+
+        <a href="services.html#backend-development" class="nav-dropdown-item">
+            <span class="nav-dropdown-item-title">Backend Development</span>
+            <span class="nav-dropdown-item-desc">APIs, databases, system integrations and custom backend logic</span>
+        </a>
+
+        <div class="nav-dropdown-divider"></div>
+
+        <a href="services.html#technical-consulting" class="nav-dropdown-item">
+            <span class="nav-dropdown-item-title">Technical Consulting</span>
+            <span class="nav-dropdown-item-desc">Architecture planning, technology decisions and system design advice</span>
+        </a>
+
+        <div class="nav-dropdown-divider"></div>
+
+        <a href="services.html#packages-pricing" class="nav-dropdown-item">
+            <span class="nav-dropdown-item-title">Packages & Pricing</span>
+            <span class="nav-dropdown-item-desc">All three tiers with full breakdowns of what is included in each</span>
+        </a>
+
+        </div>
+    </li>
+
+    <!-- Portfolio — dropdown -->
+    <li class="nav-item">
+        <a href="portfolio.html">Portfolio</a>
+        <div class="nav-dropdown">
+
+        <a href="portfolio.html#web-projects" class="nav-dropdown-item">
+            <span class="nav-dropdown-item-title">Web Projects</span>
+            <span class="nav-dropdown-item-desc">Frontend websites built for clients and personal development work</span>
+        </a>
+
+        <div class="nav-dropdown-divider"></div>
+
+        <a href="portfolio.html#case-studies" class="nav-dropdown-item">
+            <span class="nav-dropdown-item-title">Case Studies</span>
+            <span class="nav-dropdown-item-desc">Problem, solution and outcome breakdowns for selected projects</span>
+        </a>
+
+        </div>
+    </li>
+
+    <!-- Startup — no dropdown for now -->
+    <li class="nav-item no-drop">
+        <a href="#startup">Startup</a>
+    </li>
+
+    <!-- Contact — no dropdown -->
+    <li class="nav-item no-drop">
+        <a href="#contact">Contact</a>
+    </li>
+
+    </ul>
 
         <!-- CTA -->
         <a href="#contact" class="btn btn-primary nav-cta">Get a Quote</a>
@@ -53,68 +130,73 @@
         </button>
 
         </nav>
+    </header>
 
-        <!-- Mobile menu -->
-        <div class="nav-mobile" id="mobileMenu">
+    <!-- Mobile menu — outside header so it covers full screen -->
+    <div class="nav-mobile" id="mobileMenu">
         <ul class="nav-mobile-links">
             <li><a href="#top" class="nav-mobile-link">Home</a></li>
             <li><a href="#about" class="nav-mobile-link">About</a></li>
-            <li><a href="#services" class="nav-mobile-link">Services</a></li>
-            <li><a href="#portfolio" class="nav-mobile-link">Portfolio</a></li>
+            <li><a href="services.html" class="nav-mobile-link">Services</a></li>
+            <li><a href="services.html#packages-pricing" class="nav-mobile-link">&nbsp;&nbsp; Packages & Pricing</a></li>
+            <li><a href="portfolio.html" class="nav-mobile-link">Portfolio</a></li>
             <li><a href="#startup" class="nav-mobile-link">Startup</a></li>
             <li><a href="#contact" class="nav-mobile-link">Contact</a></li>
             <li><a href="#contact" class="btn btn-primary mt-6">Get a Quote</a></li>
         </ul>
-        </div>
-    </header>
+    </div>
 
     <main>
 
-        <!-- ============================================
-            HERO SECTION
-        ============================================ -->
-    <section class="hero surface-dark" id="hero">
-    <div class="container hero-container">
+    <!-- ============================================
+        HERO SECTION
+    ============================================ -->
+    <section class="hero" id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
 
-        <div class="section-label">
-        <span class="label">Remote Work — Available for projects</span>
+        <div class="container hero-container">
+
+            <div class="section-label">
+            <span class="label">Remote Work & Available for projects</span>
+            </div>
+
+            <h1 class="hero-headline heading-xl text-on-dark">
+            I build smart<br />
+            <span class="hero-headline-accent">systems</span><br />
+            that work.
+            </h1>
+
+            <p class="body-lg text-on-dark-muted hero-sub">
+            Web development, automation and technical consulting
+            for South African businesses that want to grow with confidence.
+            </p>
+
+            <div class="hero-ctas flex gap-4">
+            <a href="#services" class="btn btn-secondary">View My Services</a>
+            <a href="skills.html" class="btn btn-secondary">View My Skills</a>
+            </div>
+
+            <div class="hero-stats">
+            <div class="hero-stat">
+                <span class="hero-stat-number">100%</span>
+                <span class="hero-stat-label text-on-dark-muted">Project commitment</span>
+            </div>
+            <div class="hero-divider"></div>
+            <div class="hero-stat">
+                <span class="hero-stat-number">24hr</span>
+                <span class="hero-stat-label text-on-dark-muted">Response time</span>
+            </div>
+            <div class="hero-divider"></div>
+            <div class="hero-stat">
+                <span class="hero-stat-number">ZA</span>
+                <span class="hero-stat-label text-on-dark-muted">Based & focused</span>
+            </div>
+            </div>
+
         </div>
 
-        <h1 class="hero-headline heading-xl text-on-dark">
-        I build smart<br />
-        <span class="hero-headline-accent">systems</span><br />
-        that work.
-        </h1>
-
-        <p class="body-lg text-on-dark-muted hero-sub">
-        Web development, automation and technical consulting
-        for South African businesses that want to grow with confidence.
-        </p>
-
-        <div class="hero-ctas flex gap-4">
-        <a href="#contact" class="btn btn-primary">Get a Quote</a>
-        <a href="#portfolio" class="btn btn-secondary">View My Work</a>
-        </div>
-
-        <div class="hero-stats">
-        <div class="hero-stat">
-            <span class="hero-stat-number">100%</span>
-            <span class="hero-stat-label text-on-dark-muted">Project commitment</span>
-        </div>
-        <div class="hero-divider"></div>
-        <div class="hero-stat">
-            <span class="hero-stat-number">24hr</span>
-            <span class="hero-stat-label text-on-dark-muted">Response time</span>
-        </div>
-        <div class="hero-divider"></div>
-        <div class="hero-stat">
-            <span class="hero-stat-number">ZA</span>
-            <span class="hero-stat-label text-on-dark-muted">Based & focused</span>
-        </div>
-        </div>
-
-    </div>
-    </section>
+        </section>
 
         <!-- ============================================
             ABOUT SECTION — placeholder
@@ -126,7 +208,7 @@
             </div>
             <h2 class="heading-lg text-on-light">Coming soon.</h2>
         </div>
-        </section>
+    </section>
 
         <!-- ============================================
             SERVICES SECTION — placeholder
