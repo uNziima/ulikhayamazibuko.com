@@ -762,4 +762,50 @@
         gap: var(--space-4);
         text-align: center;
     }
+}
+
+    /* ============================================
+    ABOUT SECTION
+    ============================================ */
+
+    .about {
+    border-top: 1px solid var(--color-border-light);
+    }
+
+    .about-container {
+    max-width: 720px;
+    margin-inline: 0;
+    }
+
+    .about-headline {
+    color: var(--color-text-on-light);
+    line-height: var(--leading-snug);
+    margin-bottom: var(--space-8);
+    }
+
+    .about-body {
+    color: var(--color-text-on-light-muted);
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-10);
+    }
+
+    .about-buttons {
+    display: flex;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+    }
+
+    /* ============================================
+    RESPONSIVE — ABOUT
+    ============================================ */
+
+    @media (max-width: 768px) {
+    .about-buttons {
+        flex-direction: column;
+    }
+
+    .about-buttons .btn {
+        width: 100%;
+        justify-content: center;
+    }
     }
