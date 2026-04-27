@@ -11,7 +11,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ulikhayamazibuko.com" />
 
-    <title>Ulikhaya Mazibuko — Web Developer & Systems Builder | KwaZulu-Natal, SA</title>
+    <title>Ulikhaya Mazibuko - Web Developer & Systems Builder | KwaZulu-Natal, SA</title>
 
     <!-- CSS — order matters -->
     <link rel="stylesheet" href="css/variables.css" />
@@ -59,8 +59,8 @@
         <div class="nav-dropdown-divider"></div>
 
         <a href="services.html#google-ads-automation" class="nav-dropdown-item">
-            <span class="nav-dropdown-item-title">Google Ads & Automation</span>
-            <span class="nav-dropdown-item-desc">Google Ads setup, Google My Business optimisation and workflow automation</span>
+            <span class="nav-dropdown-item-title">Google Sheets Automation</span>
+            <span class="nav-dropdown-item-desc">Google Sheets setup and workflow automationn</span>
         </a>
 
         <div class="nav-dropdown-divider"></div>
@@ -204,6 +204,7 @@
     <section class="about surface-light" id="about">
     <div class="container about-container">
 
+        <!-- Left — text content -->
         <div class="about-text">
 
         <div class="section-label">
@@ -218,20 +219,80 @@
 
         <p class="body-lg about-body">
             I'm Ulikhaya Aphiwe Mazibuko, a Web Developer and Software 
-            Development student building a freelance practice and SaaS 
-            projects simultaneously. I work with South African businesses 
-            that want smarter systems, better websites and technology that 
-            actually serves their goals. My primary programming language is Java with 
-            C# currently in progress. I am based in KwaZulu-Natal and able to 
-            travel to Gauteng when required with the willigness to work on projects, 
-            collaborate and contribute to backend developement roles.
+                Development student building a freelance practice and SaaS 
+                projects simultaneously. I work with South African businesses 
+                that want smarter systems, better websites and technology that 
+                actually serves their goals. My primary programming language is Java with 
+                C# currently in progress. I am based in KwaZulu-Natal and able to 
+                travel to Gauteng when required with the willigness to work on projects, 
+                collaborate and contribute to backend developement roles.
         </p>
 
         <div class="about-buttons">
             <a href="about.html" class="btn btn-ghost">Learn More About Me</a>
-            <a href="https://linkedin.com" 
+            <a href="https://linkedin.com/in/ulikhaya-mazibuko-43623b261" 
             target="_blank" 
             class="btn btn-ghost">Connect on LinkedIn</a>
+        </div>
+
+        </div>
+
+        <!-- Right — visual composition (desktop only) -->
+        <div class="about-visual">
+
+        <!-- Background shape behind photo -->
+        <div class="about-shape"></div>
+
+        <!-- Offset border frame -->
+        <div class="about-photo-frame"></div>
+
+        <!-- Your photo -->
+        <div class="about-photo-wrapper">
+            <img 
+            src="images/ulikhaya.png" 
+            alt="Ulikhaya Mazibuko" 
+            class="about-photo"
+            />
+        </div>
+
+        <!-- Laptop mockup -->
+        <div class="about-laptop">
+
+            <!-- Laptop screen -->
+            <div class="laptop-screen">
+            <div class="laptop-screen-inner">
+
+                <!-- GitHub screenshot inside screen -->
+                <img 
+                src="images/github-preview.png" 
+                alt="Ulikhaya Mazibuko GitHub Profile"
+                class="laptop-github-img"
+                />
+
+                <!-- Hover overlay — GitHub link -->
+                <a 
+                href="https://github.com/uNziima" 
+                target="_blank"
+                class="laptop-hover-overlay"
+                >
+                <span class="laptop-hover-label">
+                    View GitHub Profile →
+                </span>
+                </a>
+
+            </div>
+            </div>
+
+            <!-- Laptop base -->
+            <div class="laptop-base">
+                <!-- GitHub badge -->
+                <div class="laptop-badge">
+                <span class="laptop-badge-dot"></span>
+                <span class="laptop-badge-text">github.com/uNziima</span>
+                </div>
+                <div class="laptop-notch"></div>
+            </div>
+
         </div>
 
         </div>
@@ -239,17 +300,191 @@
     </div>
     </section>
 
-        <!-- ============================================
-            SERVICES SECTION — placeholder
-        ============================================ -->
-        <section class="surface-white" id="services">
-        <div class="container">
-            <div class="section-label">
-            <span class="label">Services</span>
-            </div>
-            <h2 class="heading-lg text-on-light">Coming soon.</h2>
+    <!-- ============================================
+    SERVICES SECTION
+    ============================================ -->
+    <section class="services surface-white" id="services">
+    <div class="container services-container">
+
+        <!-- Header -->
+        <div class="services-header">
+        <div class="section-label">
+            <span class="label">Services I Provide</span>
         </div>
-        </section>
+        <h2 class="heading-lg services-headline">
+            Smart solutions for businesses<br />
+            that want to grow.
+        </h2>
+        <p class="body-lg services-subtext">
+            Two focused services delivered with full attention 
+            and two more on the way as my technical depth compounds.
+        </p>
+        </div>
+
+        <!-- Cards grid -->
+        <div class="services-grid">
+
+        <!-- Card 1 — Active -->
+    <div class="service-card service-card--active">
+
+    <!-- Top row — icon left, status right -->
+    <div class="service-card-top">
+        <div class="service-card-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" 
+            fill="none" stroke="currentColor" 
+            stroke-width="1.5" stroke-linecap="round" 
+            stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2"/>
+            <path d="M8 21h8M12 17v4"/>
+        </svg>
+        </div>
+        <div class="service-card-status service-card-status--active">
+        Available
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="service-card-content">
+        <h3 class="heading-sm service-card-title">
+        Website Design & Development
+        </h3>
+        <p class="body-sm service-card-desc">
+        Websites built for South African businesses. 
+        Time-efficient delivery, mobile-optimised and built to 
+        rank on Google.
+        </p>
+    </div>
+
+    <a href="services.html#website-design" 
+        class="service-card-link">
+        Learn More →
+    </a>
+
+    </div>
+
+    <!-- Card 2 — Active -->
+    <div class="service-card service-card--active">
+
+    <!-- Top row — icon left, status right -->
+    <div class="service-card-top">
+        <div class="service-card-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" 
+            fill="none" stroke="currentColor" 
+            stroke-width="1.5" stroke-linecap="round" 
+            stroke-linejoin="round">
+            <path d="M3 3h18v18H3z"/>
+            <path d="M3 9h18M3 15h18M9 3v18"/>
+        </svg>
+        </div>
+        <div class="service-card-status service-card-status--active">
+        Available
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="service-card-content">
+        <h3 class="heading-sm service-card-title">
+        Google Sheets Automation
+        </h3>
+        <p class="body-sm service-card-desc">
+        Custom Google Sheets systems that eliminate repetitive 
+        manual work including automated reporting, data pipelines and 
+        workflow tools built for your business.
+        </p>
+    </div>
+
+    <a href="services.html#google-sheets-automation" 
+        class="service-card-link">
+        Learn More →
+    </a>
+
+    </div>
+
+    <!-- Card 3 — Coming Soon -->
+    <div class="service-card service-card--soon">
+
+    <!-- Top row — icon left, status right -->
+    <div class="service-card-top">
+        <div class="service-card-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" 
+            fill="none" stroke="currentColor" 
+            stroke-width="1.5" stroke-linecap="round" 
+            stroke-linejoin="round">
+            <path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"/>
+            <polygon points="18 2 22 6 12 16 8 16 8 12 18 2"/>
+        </svg>
+        </div>
+        <div class="service-card-status service-card-status--soon">
+        In Development
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="service-card-content">
+        <h3 class="heading-sm service-card-title">
+        Backend Development
+        </h3>
+        <p class="body-sm service-card-desc">
+        APIs, databases and system integrations built to scale. 
+        Currently focused on building production-ready systems 
+        in Java, I'll be available for projects soon.
+        </p>
+    </div>
+
+    <span class="service-card-link service-card-link--disabled">
+        Coming Soon
+    </span>
+
+    </div>
+
+    <!-- Card 4 — Coming Soon -->
+    <div class="service-card service-card--soon">
+
+    <!-- Top row — icon left, status right -->
+    <div class="service-card-top">
+        <div class="service-card-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" 
+            fill="none" stroke="currentColor" 
+            stroke-width="1.5" stroke-linecap="round" 
+            stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 8v4l3 3"/>
+        </svg>
+        </div>
+        <div class="service-card-status service-card-status--soon">
+        Coming Soon
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="service-card-content">
+        <h3 class="heading-sm service-card-title">
+        Technical Consulting
+        </h3>
+        <p class="body-sm service-card-desc">
+        Architecture planning, technology decisions and system 
+        design advice. Building toward this as hands-on 
+        experience compounds.
+        </p>
+    </div>
+
+    <span class="service-card-link service-card-link--disabled">
+        Coming Soon
+    </span>
+
+</div>
+
+        </div>
+
+        <!-- CTA -->
+        <div class="services-cta">
+        <a href="services.html" class="btn btn-ghost">
+            View All Services
+        </a>
+        </div>
+
+    </div>
+    </section>
 
         <!-- ============================================
             PORTFOLIO SECTION — placeholder
