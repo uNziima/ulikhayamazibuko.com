@@ -1068,6 +1068,7 @@
     transform: translateY(-3px);
     }
 
+
     /* Soon card — muted */
     .service-card--soon {
     opacity: 0.6;
@@ -1172,3 +1173,302 @@
         grid-template-columns: 1fr;
     }
     }
+
+    /* ============================================
+    PORTFOLIO SECTION
+    ============================================ */
+
+    .portfolio {
+    border-top: 1px solid var(--color-border-light);
+    }
+
+    .portfolio-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+    }
+
+    .portfolio-header {
+    max-width: 640px;
+    }
+
+    .portfolio-headline {
+    color: var(--color-text-on-light);
+    margin-bottom: var(--space-4);
+    }
+
+    .portfolio-subtext {
+    color: var(--color-text-on-light-muted);
+    }
+
+    /* ============================================
+    SPLIT CARD
+    ============================================ */
+
+    .portfolio-featured {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    border: 1px solid var(--color-border-light);
+    box-shadow: var(--shadow-md);
+    max-width: 900px;
+    transition: box-shadow var(--transition-base),
+                transform var(--transition-base);
+    }
+
+    .portfolio-featured:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-3px);
+    }
+
+    /* Left — dark identity panel */
+    .portfolio-featured-left {
+    background-color: var(--color-surface-dark);
+    padding: var(--space-10) var(--space-8);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+    position: relative;
+    overflow: hidden;
+    }
+
+    /* Subtle accent circle — decorative */
+    .portfolio-featured-left::before {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    bottom: -60px;
+    right: -60px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(233, 224, 201, 0.06) 0%,
+        transparent 70%
+    );
+    pointer-events: none;
+    }
+
+    .portfolio-featured-label .label {
+    color: var(--color-text-on-dark-muted);
+    }
+
+    .portfolio-featured-label .section-label::before,
+    .portfolio-featured-label .section-label::after {
+    background-color: var(--color-text-on-dark-muted);
+    }
+
+    .portfolio-featured-name {
+    font-family: var(--font-heading);
+    font-size: var(--text-5xl);
+    font-weight: var(--weight-bold);
+    line-height: var(--leading-tight);
+    color: var(--color-text-on-dark);
+    letter-spacing: var(--tracking-tight);
+    }
+
+    .portfolio-featured-status {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    color: var(--color-text-on-dark-muted);
+    }
+
+    .portfolio-featured-status {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    color: var(--color-accent);
+    }
+
+    /* Large number — decorative bottom left */
+    .portfolio-featured-number {
+    font-family: var(--font-heading);
+    font-size: 7rem;
+    font-weight: var(--weight-bold);
+    color: rgba(255, 255, 255, 0.04);
+    line-height: 1;
+    position: absolute;
+    bottom: var(--space-4);
+    left: var(--space-6);
+    letter-spacing: var(--tracking-tight);
+    pointer-events: none;
+    user-select: none;
+    }
+
+    /* Right — light detail panel */
+    .portfolio-featured-right {
+    background-color: var(--color-surface-white);
+    padding: var(--space-10) var(--space-10);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+    }
+
+    .portfolio-featured-type {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--color-text-on-light-muted);
+    letter-spacing: var(--tracking-wide);
+    }
+
+    .portfolio-featured-desc {
+    color: var(--color-text-on-light-muted);
+    line-height: var(--leading-relaxed);
+    }
+
+    .portfolio-featured-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    }
+
+    /* Tag override for light panel */
+    .portfolio-featured-right .tag {
+    background-color: rgba(26, 26, 46, 0.05);
+    color: var(--color-text-on-light-muted);
+    border-color: var(--color-border-light);
+    font-family: var(--font-body);
+    letter-spacing: var(--tracking-normal);
+    }
+
+    /* Case study link */
+    .portfolio-featured-link {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    letter-spacing: var(--tracking-normal);
+    color: var(--color-accent-hover);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    text-decoration: none;
+    margin-top: auto;
+    transition: gap var(--transition-fast),
+                color var(--transition-fast);
+    }
+
+    .portfolio-featured-link:hover {
+    color: var(--color-text-on-light);
+    gap: var(--space-4);
+    }
+
+    .portfolio-featured-arrow {
+    transition: transform var(--transition-fast);
+    }
+
+    .portfolio-featured-link:hover .portfolio-featured-arrow {
+    transform: translateX(4px);
+    }
+
+    /* CTA row */
+    .portfolio-cta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-6);
+    }
+
+    .portfolio-cta-note {
+    color: var(--color-text-on-light-muted);
+    }
+
+    /* ============================================
+    RESPONSIVE — PORTFOLIO
+    ============================================ */
+
+    @media (max-width: 768px) {
+    .portfolio-featured {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-featured-left {
+        padding: var(--space-8) var(--space-6);
+    }
+
+    .portfolio-featured-number {
+        font-size: 5rem;
+    }
+
+    .portfolio-featured-right {
+        padding: var(--space-6);
+    }
+
+    .portfolio-cta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    }
+
+    /* ============================================
+   PORTFOLIO BACKGROUND ICONS
+============================================ */
+
+.portfolio {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-bg-icons {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.portfolio-container {
+  position: relative;
+  z-index: 1;
+}
+
+.portfolio-bg-icon {
+  position: absolute;
+  opacity: 0.045;
+  color: var(--color-text-on-light);
+}
+
+.portfolio-bg-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Position each icon individually */
+.portfolio-bg-icon--1 {
+  width: 120px;
+  height: 120px;
+  top: 8%;
+  right: 6%;
+  transform: rotate(-12deg);
+}
+
+.portfolio-bg-icon--2 {
+  width: 80px;
+  height: 80px;
+  top: 45%;
+  right: 18%;
+  transform: rotate(8deg);
+}
+
+.portfolio-bg-icon--3 {
+  width: 100px;
+  height: 100px;
+  bottom: 10%;
+  right: 8%;
+  transform: rotate(-6deg);
+}
+
+.portfolio-bg-icon--4 {
+  width: 70px;
+  height: 70px;
+  top: 20%;
+  right: 35%;
+  transform: rotate(15deg);
+}
+
+.portfolio-bg-icon--5 {
+  width: 90px;
+  height: 90px;
+  bottom: 20%;
+  right: 30%;
+  transform: rotate(-10deg);
+}
