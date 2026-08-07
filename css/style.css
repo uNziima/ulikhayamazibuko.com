@@ -101,15 +101,30 @@
     .surface-light { background-color: var(--color-surface-light); }
     .surface-white { background-color: var(--color-surface-white); }
 
-    /* Section label on light backgrounds */
+    .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-bottom: var(--space-6);
+    padding-left: var(--space-4);
+    border-left: 2px solid var(--color-accent);
+    }
+
+    /* Remove pseudo-elements entirely */
+    .section-label::before,
+    .section-label::after {
+    display: none;
+    }
+
+    /* Light section override */
+    .surface-light .section-label,
+    .surface-white .section-label {
+    border-left-color: var(--color-accent-hover);
+    }
+
     .surface-light .section-label .label,
     .surface-white .section-label .label {
     color: var(--color-accent-hover);
-    }
-
-    .surface-light .section-label::before,
-    .surface-white .section-label::before {
-    background-color: var(--color-accent-hover);
     }
 
     /* ============================================
@@ -257,14 +272,6 @@
     height: 1px;
     background-color: var(--color-accent);
     flex-shrink: 0;
-    }
-
-    /* Override for light sections */
-    .surface-light .section-label::before,
-    .surface-light .section-label::after,
-    .surface-white .section-label::before,
-    .surface-white .section-label::after {
-    background-color: var(--color-accent-hover);
     }
 
     /* ============================================
@@ -1471,4 +1478,456 @@
   bottom: 20%;
   right: 30%;
   transform: rotate(-10deg);
+}
+
+/* ============================================
+   STARTUP SECTION
+============================================ */
+
+.startup {
+  border-top: 1px solid var(--color-border-light);
+}
+
+.startup-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: center;
+}
+
+/* Left side */
+.startup-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.startup-headline {
+  color: var(--color-text-on-light);
+  line-height: var(--leading-snug);
+}
+
+.startup-body {
+  color: var(--color-text-on-light-muted);
+  line-height: var(--leading-relaxed);
+  max-width: 480px;
+}
+
+/* Status indicator */
+.startup-status {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.startup-status-indicator {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.startup-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-accent-hover);
+  box-shadow: 0 0 8px rgba(144, 164, 194, 0.5);
+  flex-shrink: 0;
+  animation: pulse-blue 2s infinite;
+}
+
+@keyframes pulse-blue {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+.startup-status-text {
+  color: var(--color-text-on-light-muted);
+}
+
+.startup-cta {
+  align-self: flex-start;
+}
+
+/* ============================================
+   RIGHT SIDE — CONFIG CARD
+============================================ */
+
+.startup-visual {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  position: relative;
+}
+
+/* Config card */
+.startup-card {
+  background-color: var(--color-surface-dark);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--color-border-dark);
+  box-shadow: var(--shadow-lg);
+}
+
+.startup-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-6);
+  border-bottom: 1px solid var(--color-border-dark);
+  background-color: var(--color-surface-mid);
+}
+
+.startup-card-dots {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.startup-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+}
+
+.startup-dot.red    { background-color: #FF5F57; }
+.startup-dot.yellow { background-color: #FFBD2E; }
+.startup-dot.green  { background-color: #28CA42; }
+
+.startup-card-filename {
+  font-size: var(--text-xs);
+  color: var(--color-text-on-dark-muted);
+  margin-left: auto;
+}
+
+.startup-card-body {
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.startup-card-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) 0;
+}
+
+.startup-card-key {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-accent-hover);
+  letter-spacing: var(--tracking-wide);
+}
+
+.startup-card-value {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-on-dark);
+}
+
+.startup-card-value--active {
+  color: #28CA42;
+}
+
+.startup-card-divider {
+  height: 1px;
+  background-color: var(--color-border-dark);
+}
+
+/* Floating tag */
+.startup-floating-tag {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  background-color: var(--color-surface-light);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  border-left: 3px solid var(--color-accent-hover);
+}
+
+.startup-floating-icon {
+  color: var(--color-accent-hover);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.startup-floating-tag .body-sm {
+  color: var(--color-text-on-light-muted);
+  line-height: var(--leading-relaxed);
+}
+
+/* ============================================
+   RESPONSIVE — STARTUP
+============================================ */
+
+@media (max-width: 1024px) {
+  .startup-container {
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+  }
+
+  .startup-body {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .startup-cta {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ============================================
+   CONTACT SECTION
+============================================ */
+
+.contact {
+  position: relative;
+  overflow: hidden;
+  padding-block: var(--space-24);
+}
+
+.contact-bg {
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-surface-dark);
+  z-index: 0;
+}
+
+/* When you add a background image later:
+.contact-bg {
+  background-image: url('../images/contact-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.12;
+}
+*/
+
+.contact-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(12, 12, 20, 0.97) 0%,
+    rgba(18, 18, 31, 0.90) 100%
+  );
+  z-index: 1;
+}
+
+.contact-container {
+  position: relative;
+  z-index: 2;
+}
+
+.contact-content {
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.contact-headline {
+  line-height: var(--leading-snug);
+}
+
+.contact-headline-accent {
+  color: var(--color-accent);
+  font-style: italic;
+}
+
+.contact-subtext {
+  max-width: 480px;
+}
+
+/* Contact options */
+.contact-options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.contact-option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  padding: var(--space-5) var(--space-6);
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--color-border-dark);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  transition: background-color var(--transition-base),
+              border-color var(--transition-base),
+              transform var(--transition-base);
+}
+
+.contact-option:hover {
+  background-color: rgba(233, 224, 201, 0.06);
+  border-color: rgba(233, 224, 201, 0.2);
+  transform: translateX(4px);
+}
+
+.contact-option-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(233, 224, 201, 0.08);
+  border-radius: var(--radius-md);
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.contact-option-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  flex: 1;
+}
+
+.contact-option-label {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-on-dark);
+}
+
+.contact-option-value {
+  font-size: var(--text-xs);
+  color: var(--color-text-on-dark-muted);
+  font-family: var(--font-mono);
+  letter-spacing: var(--tracking-wide);
+}
+
+.contact-option-arrow {
+  color: var(--color-text-on-dark-muted);
+  font-size: var(--text-base);
+  transition: transform var(--transition-fast),
+              color var(--transition-fast);
+}
+
+.contact-option:hover .contact-option-arrow {
+  transform: translateX(4px);
+  color: var(--color-accent);
+}
+
+.contact-note {
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border-dark);
+}
+
+/* ============================================
+   FOOTER
+============================================ */
+
+.footer {
+  border-top: 1px solid var(--color-border-dark);
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: var(--space-12);
+  padding-block: var(--space-16);
+}
+
+/* Brand column */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.footer-logo {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-bold);
+  color: var(--color-text-on-dark);
+  letter-spacing: var(--tracking-tight);
+}
+
+.footer-logo-accent {
+  color: var(--color-accent);
+}
+
+.footer-tagline {
+  line-height: var(--leading-relaxed);
+  max-width: 240px;
+}
+
+/* Nav and connect columns */
+.footer-nav,
+.footer-connect {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.footer-col-label {
+  color: var(--color-text-on-dark-muted);
+  font-size: var(--text-xs);
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.footer-link {
+  font-size: var(--text-sm);
+  color: var(--color-text-on-dark-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.footer-link:hover {
+  color: var(--color-accent);
+}
+
+/* Bottom bar */
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: var(--space-6);
+  border-top: 1px solid var(--color-border-dark);
+}
+
+/* ============================================
+   RESPONSIVE — CONTACT & FOOTER
+============================================ */
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: var(--space-2);
+    text-align: center;
+  }
+
+  .contact-option {
+    padding: var(--space-4) var(--space-5);
+  }
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  position: relative;
+}
+
+.nav-logo-img {
+  height: 64px;
+  width: 64px;
+  display: block;
+  filter: brightness(0) invert(1);
 }

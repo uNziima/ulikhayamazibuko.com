@@ -3,15 +3,56 @@
     <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Ulikhaya Mazibuko - Systems thinker, web developer and startup builder based in KwaZulu-Natal. Professional websites, automation systems and technical consulting for South African businesses." />
 
-    <!-- Open Graph — controls how your link looks when shared on LinkedIn etc -->
-    <meta property="og:title" content="Ulikhaya Mazibuko - Web Developer & Systems Builder" />
-    <meta property="og:description" content="Professional websites, automation systems and technical consulting for South African businesses." />
+    <!-- Primary SEO -->
+    <title>Ulikhaya Mazibuko - Web Developer & Software Development | KwaZulu-Natal, SA</title>
+    <meta name="description" content="Ulikhaya Mazibuko is a web developer and software development student based in KwaZulu-Natal, South Africa. Offering website design, Google Sheets automation and backend development for South African businesses." />
+    <meta name="keywords" content="web developer South Africa, KwaZulu-Natal web developer, website design South Africa, Google Sheets automation, backend developer South Africa, Java developer South Africa" />
+    <meta name="author" content="Ulikhaya Mazibuko" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://ulikhayamazibuko.com" />
+
+    <!-- Open Graph — LinkedIn, WhatsApp, Facebook previews -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ulikhayamazibuko.com" />
+    <meta property="og:title" content="Ulikhaya Mazibuko - Web Developer & Software Development" />
+    <meta property="og:description" content="Web development, Google Sheets automation and backend systems for South African businesses. Based in KwaZulu-Natal, available nationwide." />
+    <meta property="og:image" content="https://ulikhayamazibuko.com/images/og-preview.jpg" />
+    <meta property="og:locale" content="en_ZA" />
 
-    <title>Ulikhaya Mazibuko - Web Developer & Systems Builder | KwaZulu-Natal, SA</title>
+    <!-- Twitter/X card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ulikhaya Mazibuko - Web Developer & Software Development" />
+    <meta name="twitter:description" content="Web development, Google Sheets automation and backend systems for South African businesses." />
+    <meta name="twitter:image" content="https://ulikhayamazibuko.com/images/og-preview.jpg" />
+
+    <!-- Structured data — Person schema for Google -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ulikhaya Mazibuko",
+        "url": "https://ulikhayamazibuko.com",
+        "jobTitle": "Web Developer & Software Development Student",
+        "description": "Web developer and Software Development based in KwaZulu-Natal, South Africa. Offering website design, Google Sheets automation and backend development.",
+        "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+        },
+        "sameAs": [
+        "https://linkedin.com/in/ulikhaya-mazibuko-43623b261",
+        "https://github.com/uNziima"
+        ],
+        "knowsAbout": [
+        "Web Development",
+        "Java",
+        "Google Sheets Automation",
+        "Backend Development",
+        "Business Intelligence"
+        ]
+    }
+    </script>
 
     <!-- CSS — order matters -->
     <link rel="stylesheet" href="css/variables.css" />
@@ -27,9 +68,12 @@
     <header class="nav-wrapper" id="top">
         <nav class="nav container">
 
-        <!-- Logo -->
-        <a href="#top" class="nav-logo" id="navLogo">
-            UM <span class="nav-logo-accent">Freelance</span>
+       <a href="#top" class="nav-logo" id="navLogo">
+            <img 
+                src="images/UM_Logo.png" 
+                alt="UM Freelance Logo" 
+                class="nav-logo-img"
+            />
             <span class="nav-logo-tooltip">Freelance with Ulikhaya Mazibuko</span>
         </a>
 
@@ -138,7 +182,6 @@
             <li><a href="#top" class="nav-mobile-link">Home</a></li>
             <li><a href="#about" class="nav-mobile-link">About</a></li>
             <li><a href="services.html" class="nav-mobile-link">Services</a></li>
-            <li><a href="services.html#packages-pricing" class="nav-mobile-link">&nbsp;&nbsp; Packages & Pricing</a></li>
             <li><a href="portfolio.html" class="nav-mobile-link">Portfolio</a></li>
             <li><a href="#startup" class="nav-mobile-link">Startup</a></li>
             <li><a href="#contact" class="nav-mobile-link">Contact</a></li>
@@ -213,7 +256,7 @@
 
         <h2 class="heading-lg about-headline">
             Developer by skill.<br />
-            Systems thinker by nature.<br />
+            Problem solver by nature.<br />
             Builder by choice.
         </h2>
 
@@ -222,10 +265,10 @@
                 Development student building a freelance practice and SaaS 
                 projects simultaneously. I work with South African businesses 
                 that want smarter systems, better websites and technology that 
-                actually serves their goals. My primary programming language is Java with 
-                C# currently in progress. I am based in KwaZulu-Natal and able to 
+                actually serves their goals. My primary programming language is Java. 
+                I am based in KwaZulu-Natal and able to 
                 travel to Gauteng when required with the willigness to work on projects, 
-                collaborate and contribute to backend developement roles.
+                collaborate and contribute to software developement roles.
         </p>
 
         <div class="about-buttons">
@@ -475,13 +518,6 @@
 
         </div>
 
-        <!-- CTA -->
-        <div class="services-cta">
-        <a href="services.html" class="btn btn-ghost">
-            View All Services
-        </a>
-        </div>
-
     </div>
     </section>
 
@@ -636,55 +672,256 @@
         <a href="portfolio.html" class="btn btn-ghost">
             View All My Work
         </a>
-        <p class="body-sm portfolio-cta-note">
-            More projects added as they ship.
-        </p>
         </div>
 
     </div>
     </section>
 
         <!-- ============================================
-            STARTUP SECTION — placeholder
+            STARTUP SECTION
         ============================================ -->
-        <section class="surface-white" id="startup">
-        <div class="container">
+        <section class="startup surface-white" id="startup">
+        <div class="container startup-container">
+
+            <!-- Left — text content -->
+            <div class="startup-content">
+
             <div class="section-label">
-            <span class="label">Startup</span>
+                <span class="label">In Development</span>
             </div>
-            <h2 class="heading-lg text-on-light">Coming soon.</h2>
+
+            <h2 class="heading-lg startup-headline">
+                Building something<br />
+                bigger than freelance.
+            </h2>
+
+            <p class="body-lg startup-body">
+                WeLearnSmart is an adaptive academic platform being built 
+                for South African students which is designed to close the gap between 
+                potential and performance through smarter study systems and 
+                career guidance. Alongside freelance work, this is where the 
+                long-term thinking lives.
+            </p>
+
+            <a href="https://linkedin.com" 
+                target="_blank"
+                class="btn btn-ghost startup-cta">
+                Follow the Journey
+            </a>
+
+            </div>
+
+            <!-- Right — visual detail -->
+            <div class="startup-visual">
+
+            <!-- Main card -->
+            <div class="startup-card">
+
+                <div class="startup-card-header">
+                <div class="startup-card-dots">
+                    <span class="startup-dot red"></span>
+                    <span class="startup-dot yellow"></span>
+                    <span class="startup-dot green"></span>
+                </div>
+                <span class="mono startup-card-filename">
+                    welearnsmrt.config
+                </span>
+                </div>
+
+                <div class="startup-card-body">
+                <div class="startup-card-row">
+                    <span class="startup-card-key">product</span>
+                    <span class="startup-card-value">WeLearnSmart</span>
+                </div>
+                <div class="startup-card-divider"></div>
+                <div class="startup-card-row">
+                    <span class="startup-card-key">category</span>
+                    <span class="startup-card-value">EdTech SaaS</span>
+                </div>
+                <div class="startup-card-divider"></div>
+                <div class="startup-card-row">
+                    <span class="startup-card-key">market</span>
+                    <span class="startup-card-value">South Africa</span>
+                </div>
+                <div class="startup-card-divider"></div>
+                <div class="startup-card-row">
+                    <span class="startup-card-key">focus</span>
+                    <span class="startup-card-value">Academic success</span>
+                </div>
+                <div class="startup-card-divider"></div>
+                <div class="startup-card-row">
+                    <span class="startup-card-key">status</span>
+                    <span class="startup-card-value startup-card-value--active">
+                    Building
+                    </span>
+                </div>
+                <div class="startup-card-divider"></div>
+                <div class="startup-card-row">
+                    <span class="startup-card-key">launch</span>
+                    <span class="startup-card-value">2027</span>
+                </div>
+                </div>
+
+            </div>
+
+            </div>
+
         </div>
         </section>
 
         <!-- ============================================
-            CONTACT SECTION — placeholder
+            CONTACT SECTION
         ============================================ -->
-        <section class="surface-dark" id="contact">
-        <div class="container">
+        <section class="contact" id="contact">
+
+        <!-- Background image layer -->
+        <div class="contact-bg"></div>
+        <div class="contact-overlay"></div>
+
+        <div class="container contact-container">
+
+            <div class="contact-content">
+
             <div class="section-label">
-            <span class="label">Contact</span>
+                <span class="label">Get In Touch</span>
             </div>
-            <h2 class="heading-lg text-on-dark">Coming soon.</h2>
+
+            <h2 class="heading-lg contact-headline text-on-dark">
+                Let's build something<br />
+                <span class="contact-headline-accent">smart</span> together.
+            </h2>
+
+            <p class="body-lg contact-subtext text-on-dark-muted">
+                Have a project in mind or want to explore what's possible? 
+                Reach out directly, I respond within 24 hours.
+            </p>
+
+            <!-- Contact options -->
+            <div class="contact-options">
+
+                <!-- WhatsApp -->
+                <a href="https://wa.me/27658374361" 
+                target="_blank"
+                class="contact-option">
+                <div class="contact-option-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24"
+                        fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
+                    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.135.561 4.14 1.543 5.873L0 24l6.29-1.521A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.886 0-3.655-.497-5.188-1.367l-.371-.214-3.854.932.974-3.74-.235-.386A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+                    </svg>
+                </div>
+                <div class="contact-option-text">
+                    <span class="contact-option-label">WhatsApp</span>
+                    <span class="contact-option-value">Message me directly</span>
+                </div>
+                <span class="contact-option-arrow">→</span>
+                </a>
+
+                <!-- Email -->
+                <a href="mailto:ulikhayamazibuko@gmail.com?subject=Project%20Inquiry%20%7C%20ulikhayamazibuko.com&body=Hi%20Ulikhaya%2C%0A%0AI%20would%20like%20to%20discuss%20a%20project%20with%20you.%0A%0AName%3A%20%0AProject%20description%3A%20"
+                class="contact-option">
+                <div class="contact-option-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor"
+                        stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                </div>
+                <div class="contact-option-text">
+                    <span class="contact-option-label">Email</span>
+                    <span class="contact-option-value">ulikhayamazibuko@gmail.com</span>
+                </div>
+                <span class="contact-option-arrow">→</span>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://linkedin.com"
+                target="_blank"
+                class="contact-option">
+                <div class="contact-option-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24"
+                        fill="currentColor">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                </div>
+                <div class="contact-option-text">
+                    <span class="contact-option-label">LinkedIn</span>
+                    <span class="contact-option-value">Connect professionally</span>
+                </div>
+                <span class="contact-option-arrow">→</span>
+                </a>
+
+            </div>
+
+            </div>
+
         </div>
         </section>
 
-    </main>
-
-    <!-- ============================================
-        FOOTER
-    ============================================ -->
-    <footer class="footer surface-dark">
+        <!-- ============================================
+            FOOTER
+        ============================================ -->
+        <footer class="footer surface-dark">
         <div class="container footer-container">
-        <span class="body-sm text-on-dark-muted">
-            © 2026 Ulikhaya Mazibuko. Built with intention.
-        </span>
-        <div class="flex gap-6">
-            <a href="https://linkedin.com" class="body-sm text-on-dark-muted" target="_blank">LinkedIn</a>
-            <a href="mailto:hello@ulikhayamazibuko.com" class="body-sm text-on-dark-muted">Email</a>
-            <a href="https://github.com/YOUR-USERNAME" class="body-sm text-on-dark-muted" target="_blank">GitHub</a>
+
+            <!-- Column 1 — Brand -->
+            <div class="footer-brand">
+            <a href="#top" class="footer-logo">
+                UM <span class="footer-logo-accent">Freelance</span>
+            </a>
+            </div>
+
+            <!-- Column 2 — Navigation -->
+            <div class="footer-nav">
+            <span class="footer-col-label label">Navigation</span>
+            <ul class="footer-links">
+                <li><a href="#top" class="footer-link">Home</a></li>
+                <li><a href="#about" class="footer-link">About</a></li>
+                <li><a href="services.html" class="footer-link">Services</a></li>
+                <li><a href="portfolio.html" class="footer-link">Portfolio</a></li>
+                <li><a href="#startup" class="footer-link">Startup</a></li>
+                <li><a href="#contact" class="footer-link">Contact</a></li>
+            </ul>
+            </div>
+
+            <!-- Column 3 — Connect -->
+            <div class="footer-connect">
+            <span class="footer-col-label label">Connect</span>
+            <ul class="footer-links">
+                <li>
+                <a href="https://linkedin.com" 
+                    target="_blank"
+                    class="footer-link">LinkedIn</a>
+                </li>
+                <li>
+                <a href="https://github.com/uNziima" 
+                    target="_blank"
+                    class="footer-link">GitHub</a>
+                </li>
+                <li>
+                <a href="mailto:ulikhayamazibuko@gmail.com?subject=Project%20Inquiry%20%7C%20ulikhayamazibuko.com" 
+                    class="footer-link">Email</a>
+                </li>
+                <li>
+                <a href="https://wa.me/27658374361"
+                    target="_blank"
+                    class="footer-link">WhatsApp</a>
+                </li>
+            </ul>
+            </div>
+
         </div>
+
+        <!-- Bottom bar -->
+        <div class="container footer-bottom">
+            <span class="body-sm text-on-dark-muted">
+            © 2026 Ulikhaya Mazibuko. All rights reserved.
+            </span>
         </div>
-    </footer>
+
+        </footer>
 
     <script src="js/main.js"></script>
 
