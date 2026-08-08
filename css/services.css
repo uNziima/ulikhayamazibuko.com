@@ -405,3 +405,482 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================
+   WHAT EVERY PROJECT INCLUDES
+============================================ */
+
+.project-inclusions {
+  border-top: 1px solid var(--color-border-light);
+}
+
+.inclusions-header {
+  max-width: 640px;
+  margin-bottom: var(--space-10);
+}
+
+.inclusions-headline {
+  color: var(--color-text-on-light);
+  margin-bottom: var(--space-4);
+}
+
+.inclusions-subtext {
+  color: var(--color-text-on-light-muted);
+}
+
+.inclusions-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-10);
+}
+
+.inclusion-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  background-color: var(--color-surface-white);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+}
+
+.inclusion-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(144, 164, 194, 0.1);
+  border-radius: var(--radius-md);
+  color: var(--color-accent-hover);
+  flex-shrink: 0;
+}
+
+.inclusion-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.inclusion-title {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-on-light);
+  line-height: var(--leading-snug);
+}
+
+.inclusion-desc {
+  font-size: var(--text-xs);
+  color: var(--color-text-on-light-muted);
+  line-height: var(--leading-relaxed);
+}
+
+/* Not included */
+.exclusions-note {
+  padding: var(--space-6);
+  background-color: var(--color-surface-white);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  border-left: 3px solid rgba(144, 164, 194, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.exclusions-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-text-on-light-muted);
+}
+
+.exclusions-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.exclusion-tag {
+  font-size: var(--text-xs);
+  font-family: var(--font-body);
+  color: var(--color-text-on-light-muted);
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-full);
+  background-color: var(--color-surface-light);
+}
+
+.exclusions-note-text {
+  font-size: var(--text-sm);
+  color: var(--color-text-on-light-muted);
+  line-height: var(--leading-relaxed);
+}
+
+/* ============================================
+   BACKEND CATALOGUE
+============================================ */
+
+.backend-catalogue {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin-top: var(--space-4);
+}
+
+.backend-catalogue-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.backend-catalogue-item:last-child {
+  border-bottom: none;
+}
+
+.backend-catalogue-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.backend-catalogue-name {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-on-light);
+}
+
+.backend-catalogue-range {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-accent-hover);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-wide);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.backend-catalogue-desc {
+  font-size: var(--text-xs);
+  color: var(--color-text-on-light-muted);
+  line-height: var(--leading-relaxed);
+}
+
+/* ============================================
+   ADD-ONS SECTION
+============================================ */
+
+.addons-section {
+  border-top: 1px solid var(--color-border-light);
+}
+
+.addons-header {
+  max-width: 640px;
+  margin-bottom: var(--space-10);
+}
+
+.addons-header h2 {
+  color: var(--color-text-on-light);
+  margin-bottom: var(--space-4);
+}
+
+.addons-header p {
+  color: var(--color-text-on-light-muted);
+}
+
+.addons-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+  margin-bottom: var(--space-8);
+}
+
+.addon-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-5) var(--space-6);
+  background-color: var(--color-surface-white);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+}
+
+.addon-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.addon-name {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-on-light);
+}
+
+.addon-price {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-accent-hover);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-wide);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.addon-desc {
+  font-size: var(--text-xs);
+  color: var(--color-text-on-light-muted);
+  line-height: var(--leading-relaxed);
+}
+
+.addons-note {
+  padding: var(--space-5) var(--space-6);
+  background-color: var(--color-surface-white);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  border-left: 3px solid var(--color-accent-hover);
+}
+
+.addons-note p {
+  font-size: var(--text-sm);
+  color: var(--color-text-on-light-muted);
+  line-height: var(--leading-relaxed);
+}
+
+/* ============================================
+   MAINTENANCE PLANS
+============================================ */
+
+.maintenance-section {
+  border-top: 1px solid var(--color-border-light);
+}
+
+.maintenance-header {
+  max-width: 640px;
+  margin-bottom: var(--space-12);
+}
+
+.maintenance-header h2 {
+  color: var(--color-text-on-light);
+  margin-bottom: var(--space-4);
+}
+
+.maintenance-header p {
+  color: var(--color-text-on-light-muted);
+}
+
+.maintenance-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  margin-bottom: var(--space-8);
+}
+
+.maintenance-category {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.maintenance-category-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-accent-hover);
+  display: block;
+  margin-bottom: var(--space-2);
+}
+
+.maintenance-plan {
+  padding: var(--space-6);
+  background-color: var(--color-surface-white);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.maintenance-plan--featured {
+  background-color: var(--color-surface-dark);
+  border-color: transparent;
+}
+
+.maintenance-plan-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.maintenance-plan-name {
+  font-size: var(--text-base);
+  font-weight: var(--weight-semibold);
+}
+
+.maintenance-plan:not(.maintenance-plan--featured) .maintenance-plan-name {
+  color: var(--color-text-on-light);
+}
+
+.maintenance-plan--featured .maintenance-plan-name {
+  color: var(--color-text-on-dark);
+}
+
+.maintenance-plan-price {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-bold);
+  line-height: 1;
+}
+
+.maintenance-plan:not(.maintenance-plan--featured) .maintenance-plan-price {
+  color: var(--color-text-on-light);
+}
+
+.maintenance-plan--featured .maintenance-plan-price {
+  color: var(--color-accent);
+}
+
+.maintenance-plan-price span {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-regular);
+  opacity: 0.6;
+}
+
+.maintenance-plan-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.maintenance-plan-detail {
+  font-size: var(--text-sm);
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--color-border-light);
+  display: block;
+}
+
+.maintenance-plan:not(.maintenance-plan--featured) .maintenance-plan-detail {
+  color: var(--color-text-on-light-muted);
+  border-color: var(--color-border-light);
+}
+
+.maintenance-plan--featured .maintenance-plan-detail {
+  color: var(--color-text-on-dark-muted);
+  border-color: var(--color-border-dark);
+}
+
+.maintenance-plan-detail:last-child {
+  border-bottom: none;
+}
+
+.maintenance-plan-note {
+  padding: var(--space-4);
+  background-color: var(--color-surface-light);
+  border-radius: var(--radius-md);
+  border-left: 2px solid var(--color-border-light);
+}
+
+.maintenance-plan-note p {
+  font-size: var(--text-xs);
+  color: var(--color-text-on-light-muted);
+  line-height: var(--leading-relaxed);
+}
+
+.maintenance-overage {
+  padding: var(--space-5) var(--space-6);
+  background-color: var(--color-surface-white);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+}
+
+.maintenance-overage p {
+  font-size: var(--text-sm);
+  color: var(--color-text-on-light-muted);
+  line-height: var(--leading-relaxed);
+}
+
+/* ============================================
+   ENGAGEMENT TERMS
+============================================ */
+
+.terms-section {
+  border-top: 1px solid var(--color-border-light);
+}
+
+.terms-header {
+  max-width: 640px;
+  margin-bottom: var(--space-10);
+}
+
+.terms-header h2 {
+  color: var(--color-text-on-light);
+  margin-bottom: var(--space-4);
+}
+
+.terms-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.terms-card {
+  padding: var(--space-6);
+  background-color: var(--color-surface-light);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.terms-card-title {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-on-light);
+}
+
+.terms-card-body {
+  font-size: var(--text-sm);
+  color: var(--color-text-on-light-muted);
+  line-height: var(--leading-relaxed);
+}
+
+/* ============================================
+   RESPONSIVE — NEW SECTIONS
+============================================ */
+
+@media (max-width: 1024px) {
+  .inclusions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .maintenance-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .terms-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .addons-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .inclusions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .terms-grid {
+    grid-template-columns: 1fr;
+  }
+}
