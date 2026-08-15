@@ -12,6 +12,25 @@
   <meta property="og:url" content="https://ulikhayamazibuko.com/about.html" />
   <meta property="og:image" content="https://ulikhayamazibuko.com/images/og-preview.jpg" />
   <meta name="twitter:image" content="https://ulikhayamazibuko.com/images/og-preview.jpg" />
+  <!-- Font preconnect — establishes connection early -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Fonts load async — never blocks rendering -->
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" 
+    rel="stylesheet"
+    media="print"
+    onload="this.media='all'"
+  />
+
+  <!-- Fallback for no-JS -->
+  <noscript>
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" 
+      rel="stylesheet"
+    />
+  </noscript>
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/style.css" />
@@ -83,7 +102,7 @@
 
       <a href="index.html#contact" class="btn btn-primary nav-cta">Get a Quote</a>
 
-      <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+      <button class="nav-hamburger" id="hamburger" aria-label="Open navigation menu">
         <span></span>
         <span></span>
         <span></span>
@@ -742,8 +761,8 @@
       <div class="footer-connect">
         <span class="footer-col-label label">Connect</span>
         <ul class="footer-links">
-          <li><a href="https://linkedin.com/in/ulikhaya-mazibuko-43623b261" target="_blank" class="footer-link">LinkedIn</a></li>
-          <li><a href="https://github.com/uNziima" target="_blank" class="footer-link">GitHub</a></li>
+          <li><a href="https://linkedin.com/in/ulikhaya-mazibuko-43623b261" target="_blank" class="footer-link" aria-label="Ulikhaya Mazibuko on LinkedIn">LinkedIn</a></li>
+          <li><a href="https://github.com/uNziima" target="_blank" class="footer-link" aria-label="Ulikhaya Mazibuko on GitHub">GitHub</a></li>
           <li><a href="mailto:ulikhayamazibuko@gmail.com?subject=Project%20Inquiry" class="footer-link">Email</a></li>
           <li><a href="https://wa.me/27658374361" target="_blank" class="footer-link">WhatsApp</a></li>
         </ul>

@@ -21,7 +21,7 @@
 
      /* Text colors — context-driven, not one fixed color */
     --color-text-on-dark: #F4F7FB;
-    --color-text-on-dark-muted: rgba(244, 247, 251, 0.6);
+    --color-text-on-dark-muted: rgba(244, 247, 251, 0.72);
     --color-text-on-light: #1A1A2E;
     --color-text-on-light-muted: #5A6478;
 

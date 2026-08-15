@@ -26,6 +26,32 @@
     <meta name="twitter:description" content="Web development, Google Sheets automation and backend systems for South African businesses." />
     <meta name="twitter:image" content="https://ulikhayamazibuko.com/images/og-preview.jpg" />
 
+    <!-- Font preconnect — establishes connection early -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Preload hero background — tells browser to fetch it immediately -->
+    <link 
+    rel="preload" 
+    as="image" 
+    href="images/hero-bg.jpg"
+    fetchpriority="high"
+    />
+    <!-- Fonts load async — never blocks rendering -->
+    <link 
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" 
+    rel="stylesheet"
+    media="print"
+    onload="this.media='all'"
+    />
+
+    <!-- Fallback for no-JS -->
+    <noscript>
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" 
+        rel="stylesheet"
+    />
+    </noscript>
     <!-- Structured data — Person schema for Google -->
     <script type="application/ld+json">
     {
@@ -167,7 +193,7 @@
         <a href="#contact" class="btn btn-primary nav-cta">Get a Quote</a>
 
         <!-- Mobile hamburger -->
-        <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+        <button class="nav-hamburger" id="hamburger" aria-label="Open navigation menu">
             <span></span>
             <span></span>
             <span></span>
@@ -894,12 +920,14 @@
                 <li>
                 <a href="https://linkedin.com/in/ulikhaya-mazibuko-43623b261" 
                     target="_blank"
-                    class="footer-link">LinkedIn</a>
+                    class="footer-link" 
+                    aria-label="Ulikhaya Mazibuko on LinkedIn">LinkedIn</a>
                 </li>
                 <li>
                 <a href="https://github.com/uNziima" 
                     target="_blank"
-                    class="footer-link">GitHub</a>
+                    class="footer-link"
+                    aria-label="Ulikhaya Mazibuko on GitHub">GitHub</a>
                 </li>
                 <li>
                 <a href="mailto:ulikhayamazibuko@gmail.com?subject=Project%20Inquiry%20%7C%20ulikhayamazibuko.com" 
