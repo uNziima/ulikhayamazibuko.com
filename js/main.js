@@ -170,3 +170,20 @@ if ('loading' in HTMLImageElement.prototype) {
     }
   });
 }
+
+// ============================================
+// SCROLL TO TOP BUTTON
+// Appears after scrolling 400px from top
+// ============================================
+
+const scrollTopBtn = document.getElementById('scrollTop');
+
+if (scrollTopBtn) {
+  window.addEventListener('scroll', debounce(() => {
+    scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
+  }, 100));
+
+  scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
