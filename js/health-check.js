@@ -458,4 +458,18 @@ const HealthCheck = (() => {
 
 })();
 
-document.addEventListener('DOMContentLoaded', () => HealthCheck.mount());
+document.addEventListener('DOMContentLoaded', () => {
+  HealthCheck.mount();
+
+  const video = document.querySelector('.hc-bg-video');
+
+  if (video) {
+    video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
+
+    video.play().catch(error => {
+      console.warn('Health Check background video could not autoplay:', error);
+    });
+  }
+});
