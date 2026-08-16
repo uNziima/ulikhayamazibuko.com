@@ -259,3 +259,19 @@ document.querySelectorAll('a[href*="github"]').forEach(link => {
 // trackEvent('package_finder_completed', { package: 'Starter', price: 'R6500' });
 // trackEvent('health_check_started');
 // trackEvent('health_check_completed', { score: 42, recommendation: 'Business Clarity' });
+
+// ============================================
+// BUSINESS CLARITY DEMO — click to activate
+// ============================================
+
+const demoOverlay = document.getElementById('demoOverlay');
+const demoPlay    = document.getElementById('demoPlay');
+const demoFrame   = document.querySelector('.cs-demo-frame');
+
+if (demoPlay && demoOverlay && demoFrame) {
+  demoPlay.addEventListener('click', () => {
+    demoOverlay.classList.add('hidden');
+    demoFrame.classList.add('active');
+    trackEvent('business_clarity_demo_activated');
+  });
+}
