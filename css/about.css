@@ -576,3 +576,80 @@
     display: none;
   }
 }
+
+/* ============================================
+   WHY WORK WITH ME
+============================================ */
+
+.why-section {
+  border-top: 1px solid var(--color-border-light);
+}
+
+.why-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+}
+
+.why-header {
+  max-width: 640px;
+}
+
+.why-headline {
+  color: var(--color-text-on-light);
+  line-height: var(--leading-snug);
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.why-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-8);
+  background-color: var(--color-surface-light);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  transition: box-shadow var(--transition-base),
+              transform var(--transition-base);
+}
+
+.why-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.why-card-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(144, 164, 194, 0.1);
+  border-radius: var(--radius-md);
+  color: var(--color-accent-hover);
+  flex-shrink: 0;
+}
+
+.why-card-title {
+  font-size: var(--text-base);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-on-light);
+  line-height: var(--leading-snug);
+}
+
+.why-card-body {
+  font-size: var(--text-sm);
+  color: var(--color-text-on-light-muted);
+  line-height: var(--leading-relaxed);
+}
+
+@media (max-width: 768px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+}

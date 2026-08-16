@@ -187,3 +187,75 @@ if (scrollTopBtn) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
+
+// ============================================
+// GA4 CUSTOM EVENT TRACKING
+// Tracks meaningful interactions beyond page views
+// ============================================
+
+function trackEvent(eventName, params = {}) {
+  if (typeof gtag !== 'undefined') {
+    gtag('event', eventName, params);
+  }
+}
+
+// WhatsApp button clicks
+document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+  link.addEventListener('click', () => {
+    trackEvent('whatsapp_click', {
+      location: link.closest('section')?.id || 'unknown'
+    });
+  });
+});
+
+// CTA button clicks — Get a Quote
+document.querySelectorAll('a[href*="contact"], a[href*="mailto"]').forEach(link => {
+  link.addEventListener('click', () => {
+    trackEvent('cta_click', {
+      text: link.textContent.trim(),
+      location: link.closest('section')?.id || 'nav'
+    });
+  });
+});
+
+// Case study view clicks
+document.querySelectorAll('a[href*="case-study"], a[href*="business-clarity"], a[href*="delivery-ops"]').forEach(link => {
+  link.addEventListener('click', () => {
+    trackEvent('case_study_view', {
+      case_study: link.href
+    });
+  });
+});
+
+// Service card Learn More clicks
+document.querySelectorAll('.service-card-link').forEach(link => {
+  link.addEventListener('click', () => {
+    trackEvent('service_interest', {
+      service: link.closest('.service-card')
+               ?.querySelector('.service-card-title')
+               ?.textContent?.trim() || 'unknown'
+    });
+  });
+});
+
+// LinkedIn clicks
+document.querySelectorAll('a[href*="linkedin"]').forEach(link => {
+  link.addEventListener('click', () => {
+    trackEvent('linkedin_click', {
+      location: link.closest('section')?.id || 'footer'
+    });
+  });
+});
+
+// GitHub clicks
+document.querySelectorAll('a[href*="github"]').forEach(link => {
+  link.addEventListener('click', () => {
+    trackEvent('github_click');
+  });
+});
+
+// Placeholders — fire when package finder + health check are built
+// trackEvent('package_finder_started');
+// trackEvent('package_finder_completed', { package: 'Starter', price: 'R6500' });
+// trackEvent('health_check_started');
+// trackEvent('health_check_completed', { score: 42, recommendation: 'Business Clarity' });
