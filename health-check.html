@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Business Health Check - Ulikhaya Mazibuko</title>
+  <meta name="description" content="Free 3-minute quiz. Score your business across online presence, lead generation, automation and business visibility. Get a specific recommendation." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://ulikhayamazibuko.com/health-check.html" />
+  <meta property="og:title" content="Digital Business Health Check - Free 3-minute quiz" />
+  <meta property="og:description" content="10 questions. A score out of 100. A specific recommendation for what to fix first." />
+  <meta property="og:url" content="https://ulikhayamazibuko.com/health-check.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" media="print" onload="this.media='all'"
+  />
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  </noscript>
+
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/health-check.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav-wrapper" id="top">
+    <nav class="nav container">
+      <a href="index.html" class="nav-logo" id="navLogo">
+        <img src="images/UM_Logo.png" alt="UM Freelance" class="nav-logo-img" />
+        <span class="nav-logo-tooltip">Freelance with Ulikhaya Mazibuko</span>
+      </a>
+      <ul class="nav-links">
+        <li class="nav-item no-drop"><a href="index.html">Home</a></li>
+        <li class="nav-item no-drop"><a href="about.html">About</a></li>
+        <li class="nav-item">
+          <a href="services.html">Services</a>
+          <div class="nav-dropdown">
+            <a href="services.html#website-design" class="nav-dropdown-item">
+              <span class="nav-dropdown-item-title">Website Design & Development</span>
+              <span class="nav-dropdown-item-desc">Websites built for South African businesses</span>
+            </a>
+            <div class="nav-dropdown-divider"></div>
+            <a href="services.html#google-sheets-automation" class="nav-dropdown-item">
+              <span class="nav-dropdown-item-title">Google Sheets Automation</span>
+              <span class="nav-dropdown-item-desc">Google Sheets setup and workflow automation</span>
+            </a>
+            <div class="nav-dropdown-divider"></div>
+            <a href="services.html#backend-development" class="nav-dropdown-item">
+              <span class="nav-dropdown-item-title">Backend Development</span>
+              <span class="nav-dropdown-item-desc">APIs, databases and custom backend logic</span>
+            </a>
+            <div class="nav-dropdown-divider"></div>
+            <a href="services.html#packages-pricing" class="nav-dropdown-item">
+              <span class="nav-dropdown-item-title">Packages & Pricing</span>
+              <span class="nav-dropdown-item-desc">All tiers with full breakdowns</span>
+            </a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="portfolio.html">Portfolio</a>
+          <div class="nav-dropdown">
+            <a href="portfolio.html#web-projects" class="nav-dropdown-item">
+              <span class="nav-dropdown-item-title">Web Projects</span>
+              <span class="nav-dropdown-item-desc">Websites and systems built for real use</span>
+            </a>
+            <div class="nav-dropdown-divider"></div>
+            <a href="portfolio.html#case-studies" class="nav-dropdown-item">
+              <span class="nav-dropdown-item-title">Case Studies</span>
+              <span class="nav-dropdown-item-desc">Problem, solution and outcome breakdowns</span>
+            </a>
+          </div>
+        </li>
+        <li class="nav-item no-drop"><a href="index.html#startup">Startup</a></li>
+        <li class="nav-item no-drop"><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <a href="index.html#contact" class="btn btn-primary nav-cta">Get a Quote</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <div class="nav-mobile" id="mobileMenu">
+    <ul class="nav-mobile-links">
+      <li><a href="index.html" class="nav-mobile-link">Home</a></li>
+      <li><a href="about.html" class="nav-mobile-link">About</a></li>
+      <li><a href="services.html" class="nav-mobile-link">Services</a></li>
+      <li><a href="portfolio.html" class="nav-mobile-link">Portfolio</a></li>
+      <li><a href="index.html#startup" class="nav-mobile-link">Startup</a></li>
+      <li><a href="index.html#contact" class="nav-mobile-link">Contact</a></li>
+      <li><a href="index.html#contact" class="btn btn-primary mt-6">Get a Quote</a></li>
+    </ul>
+  </div>
+
+  <main class="hc-page">
+
+      <!-- Health Check background video -->
+        <video
+            class="hc-bg-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            aria-hidden="true"
+        >
+            <source src="images/health-check-vid.mp4" type="video/mp4" />
+        </video>
+
+        <div class="hc-bg-overlay"></div>
+
+  <!-- Quiz section -->
+
+    <!-- Quiz section -->
+    <section class="hc-section">
+      <div class="container hc-wrapper">
+        <div id="hcContainer">
+          <!-- Rendered by health-check.js -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer surface-dark">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">UM <span class="footer-logo-accent">Freelance</span></a>
+      </div>
+      <div class="footer-nav">
+        <span class="footer-col-label label">Navigation</span>
+        <ul class="footer-links">
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="about.html" class="footer-link">About</a></li>
+          <li><a href="services.html" class="footer-link">Services</a></li>
+          <li><a href="portfolio.html" class="footer-link">Portfolio</a></li>
+          <li><a href="index.html#startup" class="footer-link">Startup</a></li>
+          <li><a href="index.html#contact" class="footer-link">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-connect">
+        <span class="footer-col-label label">Connect</span>
+        <ul class="footer-links">
+          <li><a href="https://linkedin.com/in/ulikhaya-mazibuko-43623b261" target="_blank" class="footer-link" aria-label="LinkedIn">LinkedIn</a></li>
+          <li><a href="https://github.com/uNziima" target="_blank" class="footer-link" aria-label="GitHub">GitHub</a></li>
+          <li><a href="mailto:ulikhayamazibuko@gmail.com" class="footer-link">Email</a></li>
+          <li><a href="https://wa.me/27658374361" target="_blank" class="footer-link">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span class="body-sm text-on-dark-muted">© 2026 Ulikhaya Mazibuko. All rights reserved.</span>
+        </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" stroke-width="2"
+         stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+
+  <script src="js/main.js"></script>
+  <script src="js/health-check.js"></script>
+</body>
+</html>

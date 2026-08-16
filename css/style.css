@@ -2092,3 +2092,136 @@ body.menu-open {
   color: var(--color-accent-hover);
   font-weight: var(--weight-semibold);
 }
+
+/* ============================================
+   HEALTH CHECK CTA — Landing page section
+============================================ */
+
+.hc-cta-section {
+  border-top: 1px solid var(--color-border-dark);
+  border-bottom: 1px solid var(--color-border-dark);
+}
+
+.hc-cta-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: center;
+}
+
+.hc-cta-left {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.hc-cta-headline {
+  line-height: var(--leading-snug);
+}
+
+.hc-cta-body {
+  max-width: 440px;
+}
+
+.hc-cta-card {
+  padding: var(--space-8);
+  background-color: rgba(255,255,255,0.03);
+  border: 1px solid var(--color-border-dark);
+  border-radius: var(--radius-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.hc-cta-stats {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.hc-cta-stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  align-items: center;
+}
+
+.hc-cta-stat-value {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-bold);
+  color: var(--color-accent);
+  line-height: 1;
+}
+
+.hc-cta-stat-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-on-dark-muted);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+
+.hc-cta-divider {
+  width: 1px;
+  height: 36px;
+  background-color: var(--color-border-dark);
+}
+
+.hc-cta-btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.hc-cta-note {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-on-dark-muted);
+  letter-spacing: var(--tracking-wide);
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .hc-cta-container {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+}
+
+/*Experiment*/
+.hc-cta-section {
+    position: relative;
+    overflow: hidden;
+    background-color: #07131C;
+}
+
+.hc-cta-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('../images/health-check-bg.jpg');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    opacity: 0.48;
+    pointer-events: none;
+}
+
+.hc-cta-section::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(7, 19, 28, 0.28) 0%,
+            rgba(7, 19, 28, 0.56) 45%,
+            rgba(7, 19, 28, 0.82) 100%
+        );
+    pointer-events: none;
+}
+
+.hc-cta-container {
+    position: relative;
+    z-index: 1;
+}
