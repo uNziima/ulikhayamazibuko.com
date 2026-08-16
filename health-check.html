@@ -107,11 +107,30 @@
             muted
             loop
             playsinline
-            preload="metadata"
+            preload="auto"
             aria-hidden="true"
         >
-            <source src="images/health-check-vid.mp4" type="video/mp4" />
+            <source src="images/health-check-vid.MP4" type="video/mp4" />
         </video>
+
+        <script>
+            const healthCheckVideo = document.querySelector('.hc-bg-video');
+
+            if (healthCheckVideo) {
+                healthCheckVideo.muted = true;
+                healthCheckVideo.setAttribute('muted', '');
+
+                const startHealthCheckVideo = () => {
+                healthCheckVideo.play().catch(() => {
+                    // Autoplay can be rejected by the browser.
+                });
+                };
+
+                startHealthCheckVideo();
+
+                window.addEventListener('load', startHealthCheckVideo);
+            }
+            </script>
 
         <div class="hc-bg-overlay"></div>
 

@@ -2225,3 +2225,9 @@ body.menu-open {
     position: relative;
     z-index: 1;
 }
+
+.hc-bg-video {
+  display: block;
+  border: 0;
+  outline: 0;
+}
