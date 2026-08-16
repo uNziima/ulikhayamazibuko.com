@@ -32,21 +32,21 @@ const PackageFinder = (() => {
     {
       id: 'pages',
       question: 'How many pages does your site need?',
-      hint: 'Think about: Home, About, Services, Portfolio, Contact — each is a page.',
+      hint: 'Think about: Home, About, Services, Portfolio, Contact, each one as a page.',
       options: [
         {
           label: '1 page',
-          sub: 'Everything on one long scroll so that its fast and focused',
+          sub: 'Everything on one long scroll with different sections so that its fast and focused',
           value: 1
         },
         {
-          label: '2 – 6 pages',
+          label: '3 – 8 pages',
           sub: 'Home, About, Services, Portfolio, Contact etc.',
           value: 2
         },
         {
-          label: '7+ pages',
-          sub: 'Full site with blog, team, gallery, location pages',
+          label: '8+ pages',
+          sub: 'Full site with team, gallery, location pages',
           value: 3
         }
       ]
@@ -92,7 +92,7 @@ const PackageFinder = (() => {
       quoteHref: 'mailto:ulikhayamazibuko@gmail.com?subject=Landing%20Page%20Package%20Inquiry&body=Hi%20Ulikhaya%2C%20I%20completed%20the%20package%20finder%20and%20was%20recommended%20the%20Landing%20Page%20package.%20I%27d%20like%20to%20discuss%20my%20project.'
     },
     starter: {
-      name: 'Starter',
+      name: 'Professional',
       price: 'R6,500',
       note: 'Once-off · First month care included',
       description: 'A complete multi-page website built to represent your business properly which is structured, styled and ready to grow with you.',
@@ -108,7 +108,7 @@ const PackageFinder = (() => {
     },
     business: {
       name: 'Business',
-      price: 'R12,000',
+      price: 'R10,500',
       note: 'Once-off · First month care included',
       description: 'A full-featured website built for a business that needs the site to actively work — bookings, reporting, integrations and all.',
       features: [
