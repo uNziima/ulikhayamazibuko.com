@@ -2055,3 +2055,40 @@ body.menu-open {
     height: 40px;
   }
 }
+
+/* Package finder trigger button */
+.pf-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-6);
+  background-color: var(--color-surface-light);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-on-light-muted);
+  cursor: pointer;
+  transition: border-color var(--transition-fast),
+              background-color var(--transition-fast),
+              color var(--transition-fast);
+  margin-top: var(--space-4);
+  text-align: left;
+}
+
+.pf-trigger:hover {
+  border-color: var(--color-accent-hover);
+  background-color: var(--color-surface-white);
+  color: var(--color-text-on-light);
+}
+
+.pf-trigger svg {
+  color: var(--color-accent-hover);
+  flex-shrink: 0;
+}
+
+.pf-trigger-cta {
+  color: var(--color-accent-hover);
+  font-weight: var(--weight-semibold);
+}
