@@ -49,6 +49,14 @@ hamburger?.addEventListener('click', () => {
   document.body.classList.toggle('menu-open', mobileMenu.classList.contains('open'));
 });
 
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+    mobileMenu.classList.remove('open');
+    document.body.classList.remove('menu-open');
+    hamburger?.focus();
+  }
+});
+
 // Close mobile menu on link click
 mobileLinks.forEach(link => {
   link.addEventListener('click', () => {
