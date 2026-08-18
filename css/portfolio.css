@@ -61,7 +61,7 @@
 }
 
 .case-study-result-headline span {
-  color: var(--color-accent-hover);
+  color: var(--color-accent-on-light);
 }
 
 .case-study-meta {
@@ -153,7 +153,7 @@
 .methodology-number {
   font-family: var(--font-mono);
   font-size: var(--text-xs);
-  color: var(--color-accent-hover);
+  color: var(--color-accent-on-light);
   letter-spacing: var(--tracking-wide);
   flex-shrink: 0;
   padding-top: 2px;
@@ -334,7 +334,7 @@
   justify-content: center;
   background-color: rgba(144, 164, 194, 0.1);
   border-radius: var(--radius-md);
-  color: var(--color-accent-hover);
+  color: var(--color-accent-on-light);
   flex-shrink: 0;
 }
 
@@ -354,7 +354,7 @@
 
 .project-card-status--designed {
   background-color: rgba(144, 164, 194, 0.1);
-  color: var(--color-accent-hover);
+  color: var(--color-accent-on-light);
   border: 1px solid rgba(144, 164, 194, 0.2);
 }
 
@@ -571,7 +571,7 @@
 }
 
 .tech-icon--light.tech-icon--symbol {
-  color: var(--color-accent-hover);
+  color: var(--color-accent-on-light);
 }
 
 .tech-icon--light:hover {

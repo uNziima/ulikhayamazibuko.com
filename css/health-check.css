@@ -157,7 +157,7 @@
 }
 
 .hc-intro-cat-icon {
-  color: var(--color-accent-hover);
+  color: var(--color-accent-on-light);
   display: flex;
   flex-shrink: 0;
 }
@@ -210,12 +210,12 @@
   gap: var(--space-2);
   font-family: var(--font-mono);
   font-size: var(--text-xs);
-  color: var(--color-accent-hover);
+  color: var(--color-accent-on-light);
   letter-spacing: var(--tracking-wide);
 }
 
 .hc-progress-cat svg {
-  color: var(--color-accent-hover);
+  color: var(--color-accent-on-light);
 }
 
 .hc-progress-count {
@@ -327,7 +327,7 @@
 }
 
 .hc-back:hover {
-  color: var(--color-accent-hover);
+  color: var(--color-accent-on-light);
 }
 
 /* ── Results ─────────────────────────────────────────────────── */
@@ -448,7 +448,7 @@
 }
 
 .hc-cat-bar-name svg {
-  color: var(--color-accent-hover);
+  color: var(--color-accent-on-light);
 }
 
 .hc-weak-badge {
@@ -479,7 +479,7 @@
 
 .hc-cat-bar-fill {
   height: 100%;
-  background-color: var(--color-accent-hover);
+  background-color: var(--color-accent-on-light);
   border-radius: var(--radius-full);
   width: 0;
 }
@@ -570,7 +570,7 @@
 }
 
 .hc-restart:hover {
-  color: var(--color-accent-hover);
+  color: var(--color-accent-on-light);
 }
 
 /* ── Responsive ──────────────────────────────────────────────── */
