@@ -44,15 +44,18 @@ window.addEventListener('scroll', debounce(() => {
 
 // Hamburger toggle
 hamburger?.addEventListener('click', () => {
-  mobileMenu.classList.toggle('open');
-  // Prevent body scroll when menu is open
-  document.body.classList.toggle('menu-open', mobileMenu.classList.contains('open'));
+  const open = mobileMenu.classList.toggle('open');
+  document.body.classList.toggle('menu-open', open);
+  hamburger.setAttribute('aria-expanded', String(open));
+  hamburger.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
 });
 
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+  if (e.key === 'Escape' && mobileMenu?.classList.contains('open')) {
     mobileMenu.classList.remove('open');
     document.body.classList.remove('menu-open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.setAttribute('aria-label', 'Open navigation menu');
     hamburger?.focus();
   }
 });
@@ -268,10 +271,3 @@ if (demoPlay && demoOverlay && demoFrame) {
     trackEvent('business_clarity_demo_activated');
   });
 }
-
-hamburger?.addEventListener('click', () => {
-  const open = mobileMenu.classList.toggle('open');
-  document.body.classList.toggle('menu-open', open);
-  hamburger.setAttribute('aria-expanded', String(open));
-  hamburger.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
-});
