@@ -267,6 +267,7 @@ const HealthCheck = (() => {
       ${renderProgress()}
       <div class="hc-question-block">
         <h2 class="hc-question">${q.question}</h2>
+        <h2 class="hc-question" data-hc-heading tabindex="-1" aria-live="polite">
         <div class="hc-options">
           ${q.options.map((opt, i) => `
             <button class="hc-option" data-value="${opt.value}" data-qid="${q.id}">
@@ -380,6 +381,8 @@ const HealthCheck = (() => {
   function render(container) {
     if (state === 'intro')   container.innerHTML = renderIntro();
     if (state === 'quiz')    container.innerHTML = renderQuestion();
+      const heading = container.querySelector('[data-hc-heading]');
+    if (heading) heading.focus();
     if (state === 'results') {
       container.innerHTML = renderResults();
       // Animate bars after paint

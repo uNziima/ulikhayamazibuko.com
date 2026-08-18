@@ -165,21 +165,6 @@ if (heroLines.length) {
 }
 
 // ============================================
-// LAZY LOADING — native support check
-// Adds loading="lazy" to any image missing it
-// ============================================
-
-if ('loading' in HTMLImageElement.prototype) {
-  const images = document.querySelectorAll('img:not([loading])');
-  images.forEach(img => {
-    // Only lazy load images below the fold
-    if (!img.closest('.hero')) {
-      img.setAttribute('loading', 'lazy');
-    }
-  });
-}
-
-// ============================================
 // SCROLL TO TOP BUTTON
 // Appears after scrolling 400px from top
 // ============================================
@@ -265,8 +250,8 @@ document.querySelectorAll('a[href*="github"]').forEach(link => {
 // Placeholders — fire when package finder + health check are built
 // trackEvent('package_finder_started');
 // trackEvent('package_finder_completed', { package: 'Starter', price: 'R6500' });
-// trackEvent('health_check_started');
-// trackEvent('health_check_completed', { score: 42, recommendation: 'Business Clarity' });
+ trackEvent('health_check_started');
+ trackEvent('health_check_completed', { score: 42, recommendation: 'Business Clarity' });
 
 // ============================================
 // BUSINESS CLARITY DEMO — click to activate
@@ -283,3 +268,10 @@ if (demoPlay && demoOverlay && demoFrame) {
     trackEvent('business_clarity_demo_activated');
   });
 }
+
+hamburger?.addEventListener('click', () => {
+  const open = mobileMenu.classList.toggle('open');
+  document.body.classList.toggle('menu-open', open);
+  hamburger.setAttribute('aria-expanded', String(open));
+  hamburger.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+});

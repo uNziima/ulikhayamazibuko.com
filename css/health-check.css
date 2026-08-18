@@ -25,6 +25,10 @@
   color: var(--color-text-on-dark-muted);
 }
 
+.hc-page-title {
+  visibility: hidden;
+}
+
 
 /* ── Quiz wrapper ────────────────────────────────────────────── */
 
@@ -746,4 +750,10 @@
     white-space: nowrap;
     align-self: start;
   }
+}
+
+@media (max-width: 768px), (prefers-reduced-motion: reduce) {
+  .hc-bg-video { display: none; }
+  .hc-page { background-image: url('../images/health-check-bg.jpg');
+             background-size: cover; background-position: center; }
 }

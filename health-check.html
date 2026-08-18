@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D19GZRCL80"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-D19GZRCL80');
+    </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Digital Business Health Check - Ulikhaya Mazibuko</title>
@@ -32,7 +41,7 @@
   <header class="nav-wrapper" id="top">
     <nav class="nav container">
       <a href="index.html" class="nav-logo" id="navLogo">
-        <img src="images/UM_Logo.png" alt="UM Freelance" class="nav-logo-img" />
+        <img src="images/UM_Logo.png" alt="UM Freelance" class="nav-logo-img" width="280" height="320" loading="lazy"/>
         <span class="nav-logo-tooltip">Freelance with Ulikhaya Mazibuko</span>
       </a>
       <ul class="nav-links">
@@ -80,7 +89,7 @@
         <li class="nav-item no-drop"><a href="index.html#contact">Contact</a></li>
       </ul>
       <a href="index.html#contact" class="btn btn-primary nav-cta">Get a Quote</a>
-      <button class="nav-hamburger" id="hamburger" aria-label="Open navigation menu">
+      <button class="nav-hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </nav>
@@ -100,14 +109,13 @@
 
   <main class="hc-page">
 
+    <h1 class="hc-page-title">Digital Business Health Check</h1>
+
       <!-- Health Check background video -->
         <video
             class="hc-bg-video"
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="auto"
+            autoplay muted loop playsinline
+            preload="none"
             poster="images/health-check-bg.jpg"
             aria-hidden="true"
         >

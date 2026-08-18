@@ -150,25 +150,22 @@
     white-space: nowrap;
     }
 
-    /* Primary button — accent fill */
+       /* Primary button — accent fill */
     .btn-primary {
     background-color: var(--color-accent);
     color: var(--color-primary);
-    box-shadow: var(--shadow-accent);
     }
 
     .btn-primary:hover {
-    background-color: var(--color-accent-on-light);
-    color: var(--color-text-on-dark);
+    background-color: #D6CBAF;
+    color: var(--color-primary);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
     }
 
-    /* Secondary button — outline */
     .btn-secondary {
     background-color: transparent;
     color: var(--color-text-on-dark);
-    border: 1px solid var(--color-border-dark);
+    border: 1px solid rgba(255, 255, 255, 0.35);
     }
 
     .btn-secondary:hover {
@@ -254,27 +251,6 @@
     .mb-8  { margin-bottom: var(--space-8); }
     .mb-12 { margin-bottom: var(--space-12); }
 
-    /* ============================================
-    SECTION LABEL PATTERN
-    — the small mono label that sits above headings
-    ============================================ */
-
-    .section-label {
-    display: flex;
-    align-items: center;
-    gap: var(--space-3);
-    margin-bottom: var(--space-6);
-    }
-
-   .section-label::before,
-    .section-label::after {
-    content: '';
-    display: block;
-    width: 24px;
-    height: 1px;
-    background-color: var(--color-accent);
-    flex-shrink: 0;
-    }
 
     /* ============================================
     RESPONSIVE BREAKPOINTS
@@ -410,8 +386,10 @@
     .nav-hamburger {
     display: none;
     flex-direction: column;
+    justify-content: center;
     gap: 5px;
-    padding: var(--space-2);
+    min-width: 44px;
+    min-height: 44px;
     background: none;
     border: none;
     cursor: pointer;
@@ -767,10 +745,6 @@
     .hero-stats {
         justify-content: center;
     }
-
-    .section-label {
-        justify-content: center;
-    }
     }
 
     @media (max-width: 768px) {
@@ -1078,9 +1052,14 @@
     }
 
 
-    /* Soon card — muted */
-    .service-card--soon {
-    opacity: 0.6;
+    /* Soon card — muted per property, not by container opacity */
+    .service-card--soon .service-card-title {
+    color: #4A5060;
+    }
+
+    .service-card--soon .service-card-desc,
+    .service-card--soon .service-card-link--disabled {
+    color: #7A8296;
     }
 
     /* Icon */
@@ -1123,9 +1102,9 @@
     }
 
     .service-card-status--active {
-    background-color: rgba(40, 202, 66, 0.1);
-    color: #28CA42;
-    border: 1px solid rgba(40, 202, 66, 0.2);
+    background-color: rgba(26, 130, 42, 0.10);
+    color: #1A822A;
+    border: 1px solid rgba(26, 130, 42, 0.28);
     }
 
     .service-card-status--soon {
@@ -1261,11 +1240,6 @@
 
     .portfolio-featured-label .label {
     color: var(--color-text-on-dark-muted);
-    }
-
-    .portfolio-featured-label .section-label::before,
-    .portfolio-featured-label .section-label::after {
-    background-color: var(--color-text-on-dark-muted);
     }
 
     .portfolio-featured-name {
@@ -2051,8 +2025,8 @@ body.menu-open {
   .scroll-top {
     bottom: var(--space-6);
     right: var(--space-6);
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
   }
 }
 

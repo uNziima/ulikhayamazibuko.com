@@ -43,7 +43,7 @@
     <link 
     rel="preload" 
     as="image" 
-    href="images/hero-bg.jpg"
+    href="images/hero-bg.3.webp"
     fetchpriority="high"
     />
     <!-- Fonts load async — never blocks rendering -->
@@ -95,16 +95,6 @@
     <link rel="stylesheet" href="css/style.css" />
     </head>
 
-    
-    <!-- Scroll to top -->
-    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
-        stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="18 15 12 9 6 15"/>
-    </svg>
-    </button>
-
     <body>
 
     <!-- ============================================
@@ -118,6 +108,7 @@
                 src="images/UM_Logo.png" 
                 alt="UM Freelance Logo" 
                 class="nav-logo-img"
+                width="280" height="320" loading="lazy"
             />
             <span class="nav-logo-tooltip">Freelance with Ulikhaya Mazibuko</span>
         </a>
@@ -212,7 +203,7 @@
         <a href="#contact" class="btn btn-primary nav-cta">Get a Quote</a>
 
         <!-- Mobile hamburger -->
-        <button class="nav-hamburger" id="hamburger" aria-label="Open navigation menu">
+        <button class="nav-hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
@@ -338,6 +329,7 @@
             src="images/ulikhaya.png" 
             alt="Ulikhaya Mazibuko" 
             class="about-photo"
+            width="280" height="320" loading="lazy"
             />
         </div>
 
@@ -353,6 +345,7 @@
                 src="images/github-preview.png" 
                 alt="Ulikhaya Mazibuko GitHub Profile"
                 class="laptop-github-img"
+                width="280" height="320" loading="lazy"
                 />
 
                 <!-- Hover overlay — GitHub link -->
@@ -390,7 +383,7 @@
         HEALTH CHECK CTA SECTION
     ============================================ -->
     <section class="hc-cta-section surface-dark">
-    <div class="container hc-cta-container reveal">
+    <div class="container hc-cta-container">
 
         <div class="hc-cta-left">
         <div class="section-label">
@@ -674,9 +667,9 @@
     </svg>
   </div>
 
-</div
+</div>
 
-        </-- Header -->
+        <!-- Header -->
         <div class="portfolio-header">
         <div class="section-label">
             <span class="label">My Work</span>
@@ -747,7 +740,6 @@
 
         <!-- CTA -->
         <div class="portfolio-cta">
-            <a href="portfolio.html#business-clarity" class="portfolio-featured-link">
             <a href="portfolio.html" class="btn btn-ghost">View All My Work</a>
         </div>
 
@@ -1001,6 +993,15 @@
         </div>
 
         </footer>
+
+        <!-- Scroll to top -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"/>
+    </svg>
+    </button>
 
     <script src="js/main.js"></script>
 
