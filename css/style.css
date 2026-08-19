@@ -2552,7 +2552,7 @@ body.vl-open { overflow: hidden; }
   }
 }
 
-/* Mobile — horizontal snap scroll */
+/* Mobile — horizontal snap scroll with visible scrollbar */
 @media (max-width: 700px) {
   .arch-flow {
     display: flex;
@@ -2563,14 +2563,33 @@ body.vl-open { overflow: hidden; }
     -webkit-overflow-scrolling: touch;
     touch-action: pan-x;
     overscroll-behavior-x: contain;
-    padding-bottom: var(--space-3);
+    padding-bottom: var(--space-4);
     margin-inline: calc(var(--space-6) * -1);
     padding-inline: var(--space-6);
-    scrollbar-width: none;
+
+    /* Firefox scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(233, 224, 201, 0.35) rgba(255, 255, 255, 0.06);
   }
 
+  /* WebKit scrollbar — Chrome, Safari, Edge */
   .arch-flow::-webkit-scrollbar {
-    display: none;
+    height: 5px;
+    display: block;
+  }
+
+  .arch-flow::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-full);
+  }
+
+  .arch-flow::-webkit-scrollbar-thumb {
+    background: rgba(233, 224, 201, 0.35);
+    border-radius: var(--radius-full);
+  }
+
+  .arch-flow::-webkit-scrollbar-thumb:hover {
+    background: rgba(233, 224, 201, 0.55);
   }
 
   .arch-node {
@@ -2586,13 +2605,8 @@ body.vl-open { overflow: hidden; }
     height: 32px;
   }
 
-  .arch-node-label {
-    font-size: var(--text-sm);
-  }
-
-  .arch-node-sub {
-    font-size: 11px;
-  }
+  .arch-node-label { font-size: var(--text-sm); }
+  .arch-node-sub   { font-size: 11px; }
 
   .arch-node-num {
     top: var(--space-3);
@@ -2600,15 +2614,8 @@ body.vl-open { overflow: hidden; }
     font-size: 9px;
   }
 
-  .arch-detail {
-    padding: var(--space-6);
-  }
-
-  .arch-detail-num {
-    font-size: var(--text-2xl);
-  }
-
-  .arch-detail-title {
-    font-size: var(--text-lg);
-  }
+  .arch-detail { padding: var(--space-6); }
+  .arch-detail-num   { font-size: var(--text-2xl); }
+  .arch-detail-title { font-size: var(--text-lg); }
 }
+

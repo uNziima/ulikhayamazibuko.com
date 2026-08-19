@@ -46,7 +46,7 @@ const ArchitectureMap = (() => {
       num: '05',
       title: 'WhatsApp',
       tagline: 'How customers hear from you',
-      body: 'Most South African businesses run on WhatsApp so the system meets customers where they already are. Orders come in through WhatsApp, confirmations go out through WhatsApp, delivery updates arrive on WhatsApp. No app to download, no account to create.',
+      body: 'Mostouth African businesses run on WhatsApp so the system meets customers where they already are. Orders come in through WhatsApp, confirmations go out through WhatsApp, delivery updates arrive on WhatsApp. No app to download, no account to create.',
       built: ['WhatsApp Business API', 'Meta for Developers', 'Webhooks'],
       service: 'Backend Development',
       href: 'services.html#backend-development'
