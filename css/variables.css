@@ -94,8 +94,9 @@
     --max-width: 1200px;
     --nav-height: 80px;
 
-    /* Section padding */
-    --section-padding-y: var(--space-24);
+    /* Section padding — two tempos */
+    --section-padding-y: var(--space-24);       /* narrative: 96px */
+    --section-padding-y-tight: var(--space-12); /* commercial: 48px */
     --section-padding-x: var(--space-20);
 
     /* ============================================

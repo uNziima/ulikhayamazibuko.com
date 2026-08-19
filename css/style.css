@@ -96,32 +96,19 @@
     .surface-light { background-color: var(--color-surface-light); }
     .surface-white { background-color: var(--color-surface-white); }
 
+    .section-tight {
+    padding-block: var(--section-padding-y-tight);
+    }
+
    /* ============================================
-    SECTION LABEL — Pill Tag
+    SECTION LABEL
     ============================================ */
 
     .section-label {
     display: inline-flex;
     align-items: center;
     gap: var(--space-2);
-    margin-bottom: var(--space-6);
-    padding: var(--space-1) var(--space-4);
-    border-radius: var(--radius-full);
-    border: 1px solid rgba(233, 224, 201, 0.2);
-    background-color: rgba(233, 224, 201, 0.05);
-    }
-
-    /* Remove old pseudo-elements entirely */
-    .section-label::before,
-    .section-label::after {
-    display: none;
-    }
-
-    /* Light section overrides */
-    .surface-light .section-label,
-    .surface-white .section-label {
-    border-color: rgba(144, 164, 194, 0.3);
-    background-color: rgba(144, 164, 194, 0.06);
+    margin-bottom: var(--space-5);
     }
 
     .surface-light .section-label .label,
@@ -272,7 +259,7 @@
         --text-7xl: 2.5rem;
         --text-6xl: 2.25rem;
         --text-5xl: 2rem;
-        --section-padding-y: var(--space-16);
+        --section-padding-y-tight: var(--space-12);
     }
 }
     /* ============================================
@@ -1123,6 +1110,7 @@
     .service-card-desc {
     color: var(--color-text-on-light-muted);
     line-height: var(--leading-relaxed);
+    font-size: var(--text-base);
     }
 
     /* Link */
@@ -1150,6 +1138,12 @@
     .services-cta {
     display: flex;
     justify-content: flex-start;
+    }
+
+    /* style.css — near the services block */
+    .services-note {
+    margin-top: var(--space-6);
+    max-width: 46ch;
     }
 
     /* ============================================
@@ -1265,21 +1259,6 @@
     color: var(--color-accent);
     }
 
-    /* Large number — decorative bottom left */
-    .portfolio-featured-number {
-    font-family: var(--font-heading);
-    font-size: 7rem;
-    font-weight: var(--weight-bold);
-    color: rgba(255, 255, 255, 0.04);
-    line-height: 1;
-    position: absolute;
-    bottom: var(--space-4);
-    left: var(--space-6);
-    letter-spacing: var(--tracking-tight);
-    pointer-events: none;
-    user-select: none;
-    }
-
     /* Right — light detail panel */
     .portfolio-featured-right {
     background-color: var(--color-surface-white);
@@ -1369,10 +1348,6 @@
         padding: var(--space-8) var(--space-6);
     }
 
-    .portfolio-featured-number {
-        font-size: 5rem;
-    }
-
     .portfolio-featured-right {
         padding: var(--space-6);
     }
@@ -1392,69 +1367,6 @@
   overflow: hidden;
 }
 
-.portfolio-bg-icons {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.portfolio-container {
-  position: relative;
-  z-index: 1;
-}
-
-.portfolio-bg-icon {
-  position: absolute;
-  opacity: 0.045;
-  color: var(--color-text-on-light);
-}
-
-.portfolio-bg-icon svg {
-  width: 100%;
-  height: 100%;
-}
-
-/* Position each icon individually */
-.portfolio-bg-icon--1 {
-  width: 120px;
-  height: 120px;
-  top: 8%;
-  right: 6%;
-  transform: rotate(-12deg);
-}
-
-.portfolio-bg-icon--2 {
-  width: 80px;
-  height: 80px;
-  top: 45%;
-  right: 18%;
-  transform: rotate(8deg);
-}
-
-.portfolio-bg-icon--3 {
-  width: 100px;
-  height: 100px;
-  bottom: 10%;
-  right: 8%;
-  transform: rotate(-6deg);
-}
-
-.portfolio-bg-icon--4 {
-  width: 70px;
-  height: 70px;
-  top: 20%;
-  right: 35%;
-  transform: rotate(15deg);
-}
-
-.portfolio-bg-icon--5 {
-  width: 90px;
-  height: 90px;
-  bottom: 20%;
-  right: 30%;
-  transform: rotate(-10deg);
-}
 
 /* ============================================
    STARTUP SECTION

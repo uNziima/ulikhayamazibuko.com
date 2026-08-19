@@ -100,7 +100,7 @@
 }
 
 .service-deliverable-text {
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   color: var(--color-text-on-light-muted);
   line-height: var(--leading-relaxed);
 }
@@ -575,7 +575,7 @@
    ADD-ONS SECTION
 ============================================ */
 
-.addons-section {
+.addons-section-section-tight {
   border-top: 1px solid var(--color-border-light);
 }
 
@@ -657,8 +657,9 @@
    MAINTENANCE PLANS
 ============================================ */
 
-.maintenance-section {
+.maintenance-section-section-tight {
   border-top: 1px solid var(--color-border-light);
+  padding-block: var(--section-padding-y-tight)
 }
 
 .maintenance-header {

@@ -253,8 +253,8 @@ document.querySelectorAll('a[href*="github"]').forEach(link => {
 // Placeholders — fire when package finder + health check are built
 // trackEvent('package_finder_started');
 // trackEvent('package_finder_completed', { package: 'Starter', price: 'R6500' });
- trackEvent('health_check_started');
- trackEvent('health_check_completed', { score: 42, recommendation: 'Business Clarity' });
+ //trackEvent('health_check_started');
+ //trackEvent('health_check_completed', { score: 42, recommendation: 'Business Clarity' });
 
 // ============================================
 // BUSINESS CLARITY DEMO — click to activate

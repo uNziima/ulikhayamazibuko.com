@@ -365,9 +365,9 @@
 }
 
 .project-card-desc {
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   color: var(--color-text-on-light-muted);
-  line-height: var(--leading-relaxed);
+  line-height: var(--leading-normal);
   flex: 1;
 }
 
