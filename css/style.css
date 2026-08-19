@@ -2117,3 +2117,184 @@ body.menu-open {
   border: 0;
   outline: 0;
 }
+
+/* ============================================
+   VIDEO LIGHTBOX
+============================================ */
+
+body.vl-open { overflow: hidden; }
+
+.vl-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-base);
+}
+
+.vl-modal.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.vl-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(8, 8, 14, 0.92);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.vl-panel {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  transform: scale(0.97);
+  transition: transform var(--transition-base);
+}
+
+.vl-modal.open .vl-panel {
+  transform: scale(1);
+}
+
+.vl-frame-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background-color: #000;
+  box-shadow: var(--shadow-lg);
+}
+
+.vl-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.vl-close {
+  position: absolute;
+  top: calc(var(--space-12) * -1);
+  right: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255,255,255,0.08);
+  border: 1px solid var(--color-border-dark);
+  border-radius: var(--radius-md);
+  color: var(--color-text-on-dark);
+  transition: background-color var(--transition-fast),
+              border-color var(--transition-fast);
+  z-index: 2;
+}
+
+.vl-close:hover {
+  background-color: rgba(255,255,255,0.14);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.vl-caption {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-on-dark-muted);
+  letter-spacing: var(--tracking-wide);
+  text-align: center;
+}
+
+/* ============================================
+   VIDEO TRIGGER — minimal inline button
+============================================ */
+
+.video-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0;
+  background: none;
+  border: none;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-on-light-muted);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+  width: fit-content;
+}
+
+.video-trigger:hover {
+  color: var(--color-accent-hover);
+}
+
+.video-trigger-icon {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: background-color var(--transition-fast),
+              color var(--transition-fast);
+}
+
+.video-trigger:hover .video-trigger-icon {
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+  color: var(--color-surface-white);
+}
+
+/* Dark section variant */
+.surface-dark .video-trigger,
+.hero .video-trigger {
+  color: var(--color-text-on-dark-muted);
+}
+
+.surface-dark .video-trigger:hover,
+.hero .video-trigger:hover {
+  color: var(--color-accent);
+}
+
+.surface-dark .video-trigger:hover .video-trigger-icon,
+.hero .video-trigger:hover .video-trigger-icon {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-primary);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .vl-modal { padding: var(--space-4); }
+  .vl-close {
+    top: calc(var(--space-10) * -1);
+  }
+}
+
+/* Service card footer row */
+.service-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-top: auto;
+  padding-top: var(--space-2);
+}
+
+.service-card-footer .service-card-link {
+  margin-top: 0;
+}
