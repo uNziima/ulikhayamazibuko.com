@@ -5,7 +5,7 @@ web developer, and startup builder based in KZN.
 
 ## Tech Stack
 - HTML / CSS / Vanilla JS
-- Hosted on Netlify
+- Hosted on CloudFare
 - Custom domain: ulikhayamazibuko.com
 
 ## Status
