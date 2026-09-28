@@ -1,15 +1,14 @@
 # ulikhayamazibuko.com
 
-Personal portfolio site for Ulikhaya Mazibuko - systems thinker, 
-web developer, and startup builder based in KZN.
+Personal portfolio site for UM Freelance 
 
 ## Tech Stack
 - HTML / CSS / Vanilla JS
-- Hosted on CloudFare
+- Hosted on CloudFlare
 - Custom domain: ulikhayamazibuko.com
 
 ## Status
-In active development - launching June 2026
+In production
 
 ## Sections
 - Home
